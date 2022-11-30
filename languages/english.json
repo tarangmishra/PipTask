@@ -1,6 +1,6 @@
 {
     "pentair": {
-        "deviceOffline":"Device is offline",
-        "Copied":"Copied"
-        }
+        "deviceOffline": "Device is offline",
+        "Copied": "Copied"
+    }
 }

@@ -13,11 +13,9 @@ import RootNavigator from './src/navigation/RootNavigator';
 
 const App = () => {
   return (
-
     <View style={{ flex: 1 }}>
       <RootNavigator />
     </View>
-
   );
 };
 
