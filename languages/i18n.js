@@ -15,3 +15,15 @@ i18next.use(initReactI18next).init({
 });
 
 export default i18next;
+
+// import I18n from 'react-native-i18n';
+// import english from './english.json';
+
+ 
+// I18n.fallbacks = true;
+ 
+// I18n.translations = {
+//   english,
+// };
+ 
+// export default I18n;

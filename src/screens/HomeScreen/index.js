@@ -13,7 +13,6 @@ const { width } = Dimensions.get('window');
 const HomeScreen = () => {
     const styles = useStyles(width);
     const { t, i18n } = useTranslation();
-   
     const images = [img1, img2, img3, img4];
 
     const setLanguage = useCallback(
@@ -22,12 +21,9 @@ const HomeScreen = () => {
         },
         [i18n],
     );
-
-    useEffect(
-        () => setLanguage('en'),
-        [setLanguage, 'en'],
-    );
-    console.log("t ",i18n)
+    useEffect(() => {
+        setLanguage('en')
+    }, [setLanguage, 'en']);
 
     const skipFunction = () => {
 
@@ -45,14 +41,14 @@ const HomeScreen = () => {
                             <Image style={styles.imageStyle} source={item} />
                             <PipText orgStyle={styles.pentair} title="PENTAIR" />
                             <PipText orgStyle={styles.orgStyle} title="TAKE CONTROL OF YOUR HOME'S WATER" />
-                            <PipText orgStyle={styles.orgStyle} title="Stay smart, connected and protected" />
+                            <PipText orgStyle={styles.marksStyle} title="Stay smart, connected and protected" />
                         </View>
                     )}
                 />
             </View>
             <TouchableWithoutFeedback onPress={() => { skipFunction() }}>
                 <View style={styles.secondContainer}>
-                    <PipText titleStyle={styles.skipText} title={t('pentair.deviceOffline')}/>
+                    <PipText titleStyle={styles.skipText} title={t('pentair.deviceOffline')} />
                 </View>
             </TouchableWithoutFeedback>
         </View>

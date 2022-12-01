@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import {PipColors} from '../../utils/colors'
+import { PipColors } from '../../utils/colors'
 function useStyles(width) {
     return StyleSheet.create({
         container: {
@@ -10,7 +10,7 @@ function useStyles(width) {
         },
         imageStyle: {
             width: width,
-            height: '55%'
+            height: '65%'
         },
         pagination: {
             left: 8,
@@ -23,20 +23,32 @@ function useStyles(width) {
             color: PipColors.pipBlue,
             fontFamily: 'Urbanist-Medium',
         },
-        pentair:{
+        pentair: {
             color: PipColors.pipBlue,
             alignSelf: 'flex-start',
-            margin: 25,
-            fontSize:15,
+            marginTop: 25,
+            marginStart: 12,
+            fontSize: 12,
             fontFamily: 'Urbanist-Bold'
         },
         orgStyle: {
             alignSelf: 'flex-start',
-            marginStart:25,
-            marginEnd:25,
+            marginStart: 12,
+            marginEnd: 12,
+            marginTop: 20,
             color: PipColors.pipBlue,
-            fontFamily: 'Urbanist-Medium',
-            fontSize:15
+            fontFamily: 'Urbanist-ExtraBold',
+            fontSize: 18,
+            letterSpacing: -0
+        },
+        marksStyle: {
+            alignSelf: 'flex-start',
+            marginStart: 12,
+            marginEnd: 12,
+            marginTop: 15,
+            fontSize: 12,
+            color: PipColors.pipGrey,
+            fontFamily: 'Urbanist-Bold',
         }
     })
 }
