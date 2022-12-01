@@ -10,7 +10,7 @@ function useStyles(width) {
         },
         imageStyle: {
             width: width,
-            height: '65%'
+            height: '72%'
         },
         pagination: {
             left: 8,

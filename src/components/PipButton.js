@@ -36,7 +36,7 @@ function useStyles() {
       minWidth: '50%',
       alignSelf: 'center',
       textAlign: 'center',
-      backgroundColor: PipColors.light_blue,
+      backgroundColor: PipColors.pipBlue,
       paddingVertical: '3%',
       color: 'white',
       textTransform: 'uppercase',

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react'
+import React, { useCallback, useEffect, useState, useRef } from 'react'
 import { View, Image, Dimensions, TouchableWithoutFeedback } from 'react-native'
 import { PipText } from '../../components'
 import { useTranslation } from 'react-i18next';
@@ -8,13 +8,15 @@ import img2 from '../../images/img2.jpg'
 import img3 from '../../images/img3.jpg'
 import img4 from '../../images/img4.jpg'
 import { SwiperFlatList } from 'react-native-swiper-flatlist';
+import Swiper from 'react-native-swiper'
 
 const { width } = Dimensions.get('window');
 const HomeScreen = () => {
     const styles = useStyles(width);
     const { t, i18n } = useTranslation();
     const images = [img1, img2, img3, img4];
-
+    const [currIndex, setCurrIndex] = useState(0)
+    const swiper = useRef(null)
     const setLanguage = useCallback(
         language => {
             i18n.changeLanguage(language).catch(err => console.log(err));
@@ -26,17 +28,41 @@ const HomeScreen = () => {
     }, [setLanguage, 'en']);
 
     const skipFunction = () => {
-
+        setCurrIndex(currIndex + 1)
+        swiper.current.scrollTo(currIndex, true);
+    }
+    const particularImageSelected = (item, index) => {
+        console.log("item  = ", item + " index = ", index)
     }
     return (
         <View style={styles.container}>
             <View style={styles.container}>
-                <SwiperFlatList
+                <Swiper showsPagination={true}
+                    ref={swiper}
+                    loop={false}
+                    index={currIndex}
+                    onIndexChanged={(index) => {
+                        console.log('page select ', index)
+                        let item = images[index]
+                        particularImageSelected(item, index)
+                    }}>
+                    {images.map((item) => (
+
+                        <View>
+                            <Image style={styles.imageStyle} source={item} />
+                            <PipText orgStyle={styles.pentair} title="PENTAIR" />
+                            <PipText orgStyle={styles.orgStyle} title="TAKE CONTROL OF YOUR HOME'S WATER" />
+                            <PipText orgStyle={styles.marksStyle} title="Stay smart, connected and protected" />
+                        </View>
+
+                    ))}
+                </Swiper>
+                {/* <SwiperFlatList
                     paginationStyle={styles.pagination}
                     showPagination
                     data={images}
                     paginationActiveColor='red'
-                    renderItem={({ item, index }) => (
+                    renderItem={({ item }) => (
                         <View>
                             <Image style={styles.imageStyle} source={item} />
                             <PipText orgStyle={styles.pentair} title="PENTAIR" />
@@ -44,7 +70,7 @@ const HomeScreen = () => {
                             <PipText orgStyle={styles.marksStyle} title="Stay smart, connected and protected" />
                         </View>
                     )}
-                />
+                /> */}
             </View>
             <TouchableWithoutFeedback onPress={() => { skipFunction() }}>
                 <View style={styles.secondContainer}>
