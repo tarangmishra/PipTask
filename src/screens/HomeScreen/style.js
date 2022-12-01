@@ -13,11 +13,11 @@ function useStyles(width) {
             height: '72%'
         },
         pagination: {
-            left: 8,
+            right: '80%',
         },
         skipText: {
             alignSelf: 'flex-end',
-            bottom: 30,
+            bottom: 50,
             fontSize: 20,
             marginEnd: 10,
             color: PipColors.pipBlue,
@@ -49,6 +49,9 @@ function useStyles(width) {
             fontSize: 12,
             color: PipColors.pipGrey,
             fontFamily: 'Urbanist-Bold',
+        },
+        btnStyle: {
+            top: '5%'
         }
     })
 }

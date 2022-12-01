@@ -8,12 +8,12 @@ import {
 } from 'react-native';
 import { PipColors } from '../utils/colors';
 
-const PipButton = ({title, onPress, loading, buttonStyle}) => {
+const PipButton = ({title, onPress, loading, buttonStyle, btnStyle}) => {
   const styles = useStyles();
 
   return (
     <TouchableOpacity
-      style={[styles.buttonStyle, buttonStyle]}
+      style={[styles.buttonStyle, buttonStyle,btnStyle]}
       onPress={onPress}>
       {loading ? (
         <View style={[styles.titleStyle, styles.loaderBackgroundStyle]}>
@@ -30,19 +30,18 @@ function useStyles() {
   return StyleSheet.create({
     buttonStyle: {
       alignSelf: 'center',
-      margin: '5%',
+      margin: '4%',
     },
     titleStyle: {
-      minWidth: '50%',
+      minWidth: '100%',
       alignSelf: 'center',
       textAlign: 'center',
       backgroundColor: PipColors.pipBlue,
       paddingVertical: '3%',
       color: 'white',
-      textTransform: 'uppercase',
-      fontSize: 20,
+      fontSize: 15,
       borderRadius: 10,
-      fontFamily: 'Urbanist-Regular',
+      fontFamily: 'Urbanist-Bold',
       overflow: 'hidden',
     },
     loaderBackgroundStyle: {

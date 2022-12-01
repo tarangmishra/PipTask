@@ -1,5 +1,6 @@
 import React from 'react';
 import {Text, StyleSheet} from 'react-native';
+import { PipColors } from '../utils/colors';
 
 const PipText = ({title,titleStyle,orgStyle}) => {
   const styles = useStyles();
@@ -11,7 +12,7 @@ function useStyles() {
     textStyle: {
       alignSelf: 'center',
       textAlign: 'center',
-      color: 'goldenrod',
+      color: PipColors.pipBlue,
       fontFamily: 'Urbanist-Regular',
       fontSize:15,
     }

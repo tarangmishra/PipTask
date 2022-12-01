@@ -3,7 +3,7 @@ import { useColorScheme } from 'react-native';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { HomeScreen } from './../screens';
+import { HomeScreen, EmailScreen } from './../screens';
 import { PipColors } from '../utils/colors';
 const Stack = createStackNavigator();
 
@@ -16,7 +16,10 @@ const RootNavigator = (props) => {
                 component={HomeScreen}
                 name="HomeScreen"
                 options={{ headerShown: false }} />
-
+            <Stack.Screen
+                component={EmailScreen}
+                name='EmailScreen'
+                options={{ headerShown: false }} />
         </>
     );
 
