@@ -3,11 +3,11 @@ import { useColorScheme } from 'react-native';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { HomeScreen, EmailScreen } from './../screens';
+import { HomeScreen, EmailScreen, LoginScreen } from './../screens';
 import { PipColors } from '../utils/colors';
 const Stack = createStackNavigator();
 
-const RootNavigator = (props) => {
+const RootNavigator = () => {
     const scheme = useColorScheme();
 
     const Screens = (
@@ -19,6 +19,10 @@ const RootNavigator = (props) => {
             <Stack.Screen
                 component={EmailScreen}
                 name='EmailScreen'
+                options={{ headerShown: false }} />
+            <Stack.Screen
+                component={LoginScreen}
+                name='LoginScreen'
                 options={{ headerShown: false }} />
         </>
     );

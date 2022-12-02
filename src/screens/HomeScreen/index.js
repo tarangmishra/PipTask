@@ -8,7 +8,7 @@ import img2 from '../../images/img2.jpg'
 import img3 from '../../images/img3.jpg'
 import img4 from '../../images/img4.jpg'
 import Swiper from 'react-native-swiper'
-import { useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 const { width } = Dimensions.get('window');
 const HomeScreen = () => {
@@ -19,11 +19,12 @@ const HomeScreen = () => {
     const [pageIndex, setPageIndex] = useState(0)
     const navigation = useNavigation();
     const swiper = useRef(null)
+
     const setLanguage = useCallback(
         language => {
             i18n.changeLanguage(language).catch(err => console.log(err));
         },
-        [i18n],
+        [i18n]
     );
     useEffect(() => {
         setLanguage('en')
@@ -41,10 +42,10 @@ const HomeScreen = () => {
         return (
             <View>
                 <Image style={styles.imageStyle} source={item} />
-                <PipText orgStyle={styles.pentair} title="PENTAIR" />
+                <PipText orgStyle={styles.pentair} title={t('pentair.deviceOffline')} />
                 <PipText orgStyle={styles.orgStyle} title="Worry a lot less, enjoy a lot more" />
                 <PipText orgStyle={styles.marksStyle} title="Peace of mind at your fingertips" />
-                <PipButton onPress={()=>{navigation.navigate('EmailScreen')}} btnStyle={styles.btnStyle} title={"Continue"} />
+                <PipButton onPress={() => { navigation.navigate('EmailScreen') }} btnStyle={styles.btnStyle} title={"Continue"} />
             </View>
         );
     }
@@ -91,7 +92,7 @@ const HomeScreen = () => {
             {(pageIndex != 3) ?
                 <TouchableWithoutFeedback onPress={() => { skipFunction() }}>
                     <View style={styles.secondContainer}>
-                        <PipText titleStyle={styles.skipText} title={t('pentair.deviceOffline')} />
+                        <PipText titleStyle={styles.skipText}>{t('pentair.deviceOffline')}</PipText>
                     </View>
                 </TouchableWithoutFeedback> : null}
 

@@ -2,13 +2,11 @@ import React, { useCallback, useState } from 'react'
 import { View } from 'react-native'
 import { PipButton, PipText } from '../../components'
 import useStyles from './style'
-import { FormInputEmailField } from '../../../src/components/form'
+import { FormInputEmailField, FormInputPasswordField } from '../../../src/components/form'
 import { useForm } from 'react-hook-form';
-import { useNavigation } from '@react-navigation/native'
 
-const EmailScreen = () => {
+const LoginScreen = () => {
     const styles = useStyles();
-    const navigation = useNavigation();
     const { control, formState: { errors }, handleSubmit, setValue, getValues } = useForm();
     return (
         <View style={styles.container}>
@@ -18,11 +16,18 @@ const EmailScreen = () => {
             <PipText title="Get the most out of your home's water. enter to the mail to get started" orgStyle={styles.hintStyle} />
             <FormInputEmailField
                 title={"Email Address"}
+                placeHolder = {"Email Address"}
                 control={control}
                 name={"Name"}
                 rules={"Rules"} />
-            <PipButton onPress={()=>navigation.navigate('LoginScreen')} title={"Get Started"} btnStyle={styles.bottomView} />
+            <FormInputPasswordField
+                title={"Password"}
+                placeHolder = {"Password"}
+                control={control}
+                name={"Name"}
+                rules={"Rules"} />
+            <PipButton title={"Get Started"} btnStyle={styles.bottomView} />
         </View>
     );
 }
-export default EmailScreen;
+export default LoginScreen;

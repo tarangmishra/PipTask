@@ -1,5 +1,5 @@
 import i18next from 'i18next';
-import {initReactI18next} from 'react-i18next';
+import { initReactI18next } from 'react-i18next';
 import english from './english.json';
 
 i18next.use(initReactI18next).init({
@@ -7,7 +7,7 @@ i18next.use(initReactI18next).init({
   fallbackLng: 'en',
   compatibilityJSON: 'v3',
   resources: {
-    en: english
+    en: english,
   },
   react: {
     useSuspense: false,
@@ -16,14 +16,4 @@ i18next.use(initReactI18next).init({
 
 export default i18next;
 
-// import I18n from 'react-native-i18n';
-// import english from './english.json';
 
- 
-// I18n.fallbacks = true;
- 
-// I18n.translations = {
-//   english,
-// };
- 
-// export default I18n;
