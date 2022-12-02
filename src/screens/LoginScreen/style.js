@@ -31,15 +31,15 @@ function useStyles() {
             fontFamily: 'Urbanist-Regular',
             marginTop: '5%'
         },
-        bottomView:{
-        width: '80%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute', 
-        bottom: 0,
+        bottomView: {
+            width: '80%',
+            justifyContent: 'center',
+            alignItems: 'center',
+            position: 'absolute',
+            bottom: 0,
         },
-        disbaleTextInput : {
-            backgroundColor: PipColors.pipdisbalegry, 
+        disbaleTextInput: {
+            backgroundColor: PipColors.pipdisbalegry
         }
     })
 }

@@ -92,7 +92,7 @@ const HomeScreen = () => {
             {(pageIndex != 3) ?
                 <TouchableWithoutFeedback onPress={() => { skipFunction() }}>
                     <View style={styles.secondContainer}>
-                        <PipText titleStyle={styles.skipText}>{t('pentair.deviceOffline')}</PipText>
+                        <PipText titleStyle={styles.skipText}>{t('deviceOffline')}</PipText>
                     </View>
                 </TouchableWithoutFeedback> : null}
 

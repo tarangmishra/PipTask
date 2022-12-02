@@ -1,6 +1,12 @@
 {
-    "pentair": {
+    "translation": {
         "deviceOffline": "Device is offline",
-        "Copied": "Copied"
+        "Copied": "Copied",
+        "registerUser": {
+            "signUpFormTitles": {
+                "email": "Email address",
+                "password": "Create a password"
+            }
+        }
     }
 }

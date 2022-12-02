@@ -5,6 +5,7 @@ import useStyles from './style'
 import { FormInputEmailField, FormInputPasswordField } from '../../../src/components/form'
 import { useForm } from 'react-hook-form';
 import { useRoute } from '@react-navigation/native'
+import { SignUpFormSchema } from '../../constants/formSchemas/SignUpFormSchema';
 
 const LoginScreen = (props) => {
     const styles = useStyles();
@@ -18,13 +19,13 @@ const LoginScreen = (props) => {
             <PipText title="Welocme to the Pentair Home app!" orgStyle={styles.welcomestyle} />
             <PipText title="Get the most out of your home's water. enter to the mail to get started" orgStyle={styles.hintStyle} />
             <FormInputEmailField
-                title={"Email Address"}
+                title={SignUpFormSchema.email.title}
                 placeHolder={route.params.email}
                 editable = {false}
                 control={control}
                 inputStyle = {styles.disbaleTextInput}
-                name={"Email"}
-                rules={"Rules"} />
+                name={SignUpFormSchema.email.name}
+                rules={SignUpFormSchema.email.rules} />
             <FormInputPasswordField
                 title={"Password"}
                 placeHolder={"Password"}
