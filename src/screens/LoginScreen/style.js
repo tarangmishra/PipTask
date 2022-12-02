@@ -37,6 +37,9 @@ function useStyles() {
         alignItems: 'center',
         position: 'absolute', 
         bottom: 0,
+        },
+        disbaleTextInput : {
+            backgroundColor: PipColors.pipdisbalegry, 
         }
     })
 }

@@ -9,7 +9,7 @@ import { PipColors } from '../utils/colors';
 const PipEditText = props => {
     const styles = useStyles(props.isPin || false);
     const gStyle = globleStyle(useTheme().dark)
-    const { isPassword, title, placeHolder, inputStyle } = props;
+    const { isPassword, title, placeHolder,editable, inputStyle } = props;
     const [secureText, setSecureText] = useState(isPassword || false);
 
     const textInputProps = {
@@ -24,6 +24,7 @@ const PipEditText = props => {
                 autoCorrect={false}
                 secureTextEntry={secureText}
                 placeholder={placeHolder}
+                editable={editable}
                 {...textInputProps}
                 style={[gStyle.inputTextStyle, inputStyle]}
             />

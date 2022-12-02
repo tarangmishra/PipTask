@@ -10,6 +10,10 @@ const EmailScreen = () => {
     const styles = useStyles();
     const navigation = useNavigation();
     const { control, formState: { errors }, handleSubmit, setValue, getValues } = useForm();
+    const onSubmit = async form => {
+        console.log("form ", form.Name)
+        navigation.navigate('LoginScreen', {email: form.Name})
+    }
     return (
         <View style={styles.container}>
             <PipText title="PENTAIR" orgStyle={styles.titleStyle} />
@@ -21,7 +25,7 @@ const EmailScreen = () => {
                 control={control}
                 name={"Name"}
                 rules={"Rules"} />
-            <PipButton onPress={()=>navigation.navigate('LoginScreen')} title={"Get Started"} btnStyle={styles.bottomView} />
+            <PipButton onPress={handleSubmit(onSubmit)} title={"Get Started"} btnStyle={styles.bottomView} />
         </View>
     );
 }
