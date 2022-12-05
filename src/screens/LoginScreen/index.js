@@ -13,19 +13,19 @@ const LoginScreen = (props) => {
     const { control, formState: { errors }, handleSubmit, setValue, getValues } = useForm();
     return (
         <View style={styles.container}>
-             {/* {console.log("props ", route.params.email)} */}
+            {/* {console.log("props ", route.params.email)} */}
             <PipText title="PENTAIR" orgStyle={styles.titleStyle} />
             <View style={styles.line} />
             <PipText title="Welocme to the Pentair Home app!" orgStyle={styles.welcomestyle} />
             <PipText title="Get the most out of your home's water. enter to the mail to get started" orgStyle={styles.hintStyle} />
             <FormInputEmailField
-                title={SignUpFormSchema.email.title}
+                title={"Email"}
                 placeHolder={route.params.email}
-                editable = {false}
+                editable={false}
                 control={control}
-                inputStyle = {styles.disbaleTextInput}
-                name={SignUpFormSchema.email.name}
-                rules={SignUpFormSchema.email.rules} />
+                inputStyle={styles.disbaleTextInput}
+                name={"email"}
+                rules={"email"} />
             <FormInputPasswordField
                 title={"Password"}
                 placeHolder={"Password"}

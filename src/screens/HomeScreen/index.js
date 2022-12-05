@@ -42,7 +42,7 @@ const HomeScreen = () => {
         return (
             <View>
                 <Image style={styles.imageStyle} source={item} />
-                <PipText orgStyle={styles.pentair} title={t('pentair.deviceOffline')} />
+                <PipText orgStyle={styles.pentair} title="PENTAIR" />
                 <PipText orgStyle={styles.orgStyle} title="Worry a lot less, enjoy a lot more" />
                 <PipText orgStyle={styles.marksStyle} title="Peace of mind at your fingertips" />
                 <PipButton onPress={() => { navigation.navigate('EmailScreen') }} btnStyle={styles.btnStyle} title={"Continue"} />
