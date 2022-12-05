@@ -9,7 +9,7 @@ import { useNavigation } from '@react-navigation/native'
 const EmailScreen = () => {
     const styles = useStyles();
     const navigation = useNavigation();
-    const { control, formState: { errors }, handleSubmit, setValue, getValues } = useForm();
+    const { control, handleSubmit } = useForm();
     const onSubmit = async form => {
         console.log("form ", form.Name)
         navigation.navigate('LoginScreen', {email: form.Name})
