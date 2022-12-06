@@ -40,6 +40,11 @@ function useStyles() {
             position: 'absolute',
             bottom: 0,
         },
+        validpassword: {
+            color: 'red',
+            marginStart: 12,
+            fontFamily: 'Urbanist-Regular'
+        }
     })
 }
 export default useStyles;

@@ -6,28 +6,34 @@ import { FormInputEmailField } from '../../../src/components/form'
 import { useForm } from 'react-hook-form';
 import { useNavigation } from '@react-navigation/native'
 import { i18n } from 'react-native-i18n-localize'
-import {SignUpFormSchema} from '../../constants/formSchemas/SignUpFormSchema'
+import { SignUpFormSchema } from '../../constants/formSchemas/SignUpFormSchema'
+import { ErrorMessage } from '@hookform/error-message';
 
 const EmailScreen = () => {
     const styles = useStyles();
     const navigation = useNavigation();
-    const { control, handleSubmit } = useForm();
+    const { control, formState: { errors } ,handleSubmit } = useForm();
     const onSubmit = async form => {
-        console.log("form ", form.Name)
-        navigation.navigate('LoginScreen', {email: form.Name})
+        console.log("form ", form.email)
+        navigation.navigate('LoginScreen', { email: form.email })
     }
     return (
         <View style={styles.container}>
             <PipText title={i18n.t('translation.Pentair')} orgStyle={styles.titleStyle} />
             <View style={styles.line} />
-            <PipText title={i18n.t('translation.Welcome')}  orgStyle={styles.welcomestyle} />
+            <PipText title={i18n.t('translation.Welcome')} orgStyle={styles.welcomestyle} />
             <PipText title={i18n.t('translation.WelcomeHint')} orgStyle={styles.hintStyle} />
             <FormInputEmailField
                 title={SignUpFormSchema.email.title}
                 control={control}
-                name={"Name"}
-                rules={"Rules"} 
-                placeHolder={SignUpFormSchema.email.title}/>
+                name={SignUpFormSchema.email.name}
+                rules={SignUpFormSchema.email.rules}
+                placeHolder={SignUpFormSchema.email.title} />
+            <ErrorMessage
+                errors={errors}
+                name={SignUpFormSchema.email.name}
+                render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validpassword')} />}
+            />
             <PipButton onPress={handleSubmit(onSubmit)} title={"Get Started"} btnStyle={styles.bottomView} />
         </View>
     );

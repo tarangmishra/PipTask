@@ -12,6 +12,10 @@
         "Skip": "Skip",
         "Welcome": "Welocme to the Pentair\nHome app!",
         "WelcomeHint": "Get the most out of your home's water.\nenter to the mail to get started",
+        "AlreadyAccount": "Looks like you already\nhave a Pentair account",
+        "Signin": "Sign in to go to your account",
+        "ForgotPassword": "Forgot Password?",
+        "Validpassword": "Enter a valid password",
         "registerUser": {
             "signUpFormTitles": {
                 "email": "Email address",

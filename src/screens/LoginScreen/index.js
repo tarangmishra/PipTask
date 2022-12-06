@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import { useRoute } from '@react-navigation/native'
 import { i18n } from 'react-native-i18n-localize'
 import { SignUpFormSchema } from '../../constants/formSchemas/SignUpFormSchema';
+import { ErrorMessage } from '@hookform/error-message';
 
 const LoginScreen = (props) => {
     const styles = useStyles();
@@ -14,18 +15,17 @@ const LoginScreen = (props) => {
     const { control, formState: { errors }, handleSubmit, setValue, getValues } = useForm();
     return (
         <View style={styles.container}>
-            {/* {console.log("props ", route.params.email)} */}
+            {console.log("props ", route.params.email)}
             <PipText title={i18n.t('translation.Pentair')} orgStyle={styles.titleStyle} />
             <View style={styles.line} />
-            <PipText title={i18n.t('translation.Welcome')} orgStyle={styles.welcomestyle} />
-            <PipText title={i18n.t('translation.WelcomeHint')} orgStyle={styles.hintStyle} />
+            <PipText title={i18n.t('translation.AlreadyAccount')} orgStyle={styles.welcomestyle} />
+            <PipText title={i18n.t('translation.Signin')} orgStyle={styles.hintStyle} />
             <FormInputEmailField
                 title={"Email"}
-                placeHolder={route.params.email}
                 editable={false}
                 control={control}
                 inputStyle={styles.disbaleTextInput}
-                placeHolder= {SignUpFormSchema.email.title}
+                placeHolder= {route.params.email}
                 name={"email"}
                 rules={"email"} />
             <FormInputPasswordField
