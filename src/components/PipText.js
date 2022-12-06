@@ -10,8 +10,6 @@ const PipText = ({title,titleStyle,orgStyle}) => {
 function useStyles() {
   return StyleSheet.create({
     textStyle: {
-      alignSelf: 'center',
-      textAlign: 'center',
       color: PipColors.pipBlue,
       fontFamily: 'Urbanist-Regular',
       fontSize:15,

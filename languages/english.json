@@ -1,7 +1,15 @@
 {
     "translation": {
-        "deviceOffline": "Device is offline",
-        "Copied": "Copied",
+        "Pentair": "PENTAIR",
+        "Enjoy": "Worry a lot less, enjoy\na lot more",
+        "Peace": "Peace of mind at your fingertips",
+        "Water": "Take control of your\nhome's water",
+        "Smart": "Stay smart, connected and protected",
+        "ManageSystem": "Manage systems on\nthe go.",
+        "Status": "Get status information, home or away, 24/7",
+        "Todo": "We'll let you know\nwhat to do, when.",
+        "Receive": "Receive alerts sent in your phone- and if you choose-your trusted pros",
+        "Skip": "Skip",
         "registerUser": {
             "signUpFormTitles": {
                 "email": "Email address",

@@ -5,53 +5,46 @@ function useStyles(width) {
         container: {
             flex: 1,
         },
-        secondContainer: {
-            flex: 0,
-        },
         imageStyle: {
             width: width,
-            height: '72%'
+            height: '65%'
         },
         pagination: {
             right: '80%',
         },
         skipText: {
+            position: 'absolute',
             alignSelf: 'flex-end',
-            bottom: 50,
-            fontSize: 20,
-            marginEnd: 10,
+            bottom: 20,
+            fontSize: 14,
+            end: 10,
             color: PipColors.pipBlue,
-            fontFamily: 'Urbanist-Medium',
+            fontFamily: 'Urbanist-Bold',
         },
         pentair: {
             color: PipColors.pipBlue,
-            alignSelf: 'flex-start',
-            marginTop: 25,
             marginStart: 12,
+            marginTop: "6%",
             fontSize: 12,
             fontFamily: 'Urbanist-Bold'
         },
         orgStyle: {
-            alignSelf: 'flex-start',
+            marginTop: '4%',
             marginStart: 12,
-            marginEnd: 12,
-            marginTop: 20,
             color: PipColors.pipBlue,
             fontFamily: 'Urbanist-ExtraBold',
-            fontSize: 18,
-            letterSpacing: -0
+            fontSize: 25,
         },
         marksStyle: {
-            alignSelf: 'flex-start',
-            marginStart: 12,
-            marginEnd: 12,
-            marginTop: 15,
+            marginTop: '3%',
             fontSize: 12,
-            color: PipColors.pipGrey,
-            fontFamily: 'Urbanist-Bold',
+            marginStart: 12,
+            color: PipColors.pipDisableText,
+            fontFamily: 'Urbanist-Regular',
         },
         btnStyle: {
-            top: '5%'
+            position: 'absolute',
+            bottom: 0
         }
     })
 }
