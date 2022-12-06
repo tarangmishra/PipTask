@@ -7,13 +7,13 @@ function globleStyle(dark) {
       color: PipColors.pipDisableText,
       fontFamily: 'Urbanist-SemiBold',
       height: 46,
-      fontSize: 18,
+      fontSize: 16,
       margin:10,
-      marginEnd: 30,
       borderWidth: 1,
       borderColor: PipColors.pipGrey,
       borderRadius: 10,
-      letterSpacing:1
+      letterSpacing:1,
+      paddingStart: 15
     },
     labelTextStyle: {
       color: 'black',

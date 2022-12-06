@@ -8,11 +8,10 @@ function useStyles() {
         },
         titleStyle: {
             justifyContent: 'center',
-            alignItems: 'center',
+            alignSelf: 'center',
             marginTop: '15%',
             fontFamily: 'Urbanist-Bold',
-            fontSize: 18,
-            padding: 2
+            fontSize: 15,
         },
         line: {
             borderBottomColor: PipColors.pipGrey,
@@ -20,16 +19,19 @@ function useStyles() {
             marginTop: 15
         },
         welcomestyle: {
-            marginTop: '5%',
+            marginTop: '3%',
             fontFamily: 'Urbanist-Bold',
             fontSize: 25,
-            padding: 2
+            marginStart: 12,
+            letterSpacing: -0
         },
         hintStyle: {
             fontSize: 12,
             color: PipColors.pipGrey,
             fontFamily: 'Urbanist-Regular',
-            marginTop: '5%'
+            marginTop: '3%',
+            marginStart: 12,
+            marginBottom: '3%'
         },
         bottomView: {
             width: '80%',

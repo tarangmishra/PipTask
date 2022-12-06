@@ -2,7 +2,7 @@ import { EMAIL, PASSWORD_REGEX } from '../regex';
 
 export const SignUpFormSchema = {
   email: {
-    title: 'registerUser.signUpFormTitles.email',
+    title: 'Email Address',
     name: 'email',
     rules: {
       required: 'common.required',

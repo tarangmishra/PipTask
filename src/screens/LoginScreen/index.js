@@ -5,6 +5,7 @@ import useStyles from './style'
 import { FormInputEmailField, FormInputPasswordField } from '../../../src/components/form'
 import { useForm } from 'react-hook-form';
 import { useRoute } from '@react-navigation/native'
+import { i18n } from 'react-native-i18n-localize'
 import { SignUpFormSchema } from '../../constants/formSchemas/SignUpFormSchema';
 
 const LoginScreen = (props) => {
@@ -14,16 +15,17 @@ const LoginScreen = (props) => {
     return (
         <View style={styles.container}>
             {/* {console.log("props ", route.params.email)} */}
-            <PipText title="PENTAIR" orgStyle={styles.titleStyle} />
+            <PipText title={i18n.t('translation.Pentair')} orgStyle={styles.titleStyle} />
             <View style={styles.line} />
-            <PipText title="Welocme to the Pentair Home app!" orgStyle={styles.welcomestyle} />
-            <PipText title="Get the most out of your home's water. enter to the mail to get started" orgStyle={styles.hintStyle} />
+            <PipText title={i18n.t('translation.Welcome')} orgStyle={styles.welcomestyle} />
+            <PipText title={i18n.t('translation.WelcomeHint')} orgStyle={styles.hintStyle} />
             <FormInputEmailField
                 title={"Email"}
                 placeHolder={route.params.email}
                 editable={false}
                 control={control}
                 inputStyle={styles.disbaleTextInput}
+                placeHolder= {SignUpFormSchema.email.title}
                 name={"email"}
                 rules={"email"} />
             <FormInputPasswordField

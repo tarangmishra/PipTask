@@ -61,7 +61,7 @@ function useStyles() {
             fontWeight: '700',
             padding: '2%',
             paddingHorizontal: '3%',
-            textAlign: 'center'
+            textAlign: 'center',
         },
     });
 }
