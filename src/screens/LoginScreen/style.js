@@ -42,6 +42,11 @@ function useStyles() {
         },
         disbaleTextInput: {
             backgroundColor: PipColors.pipdisbalegry
+        },
+        passwordstyle: {
+            color: 'black',
+            fontSize: 15,
+            fontFamily: 'Urbanist-Bold'
         }
     })
 }

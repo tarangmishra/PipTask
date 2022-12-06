@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, TextInput, Text, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/Ionicons';
 import globleStyle from './style'
 import { useTheme } from '@react-navigation/native';
 import { PipColors } from '../utils/colors';
@@ -32,9 +32,9 @@ const PipEditText = props => {
                 <Icon
                     style={styles.eyeIconStyle}
                     onPress={() => setSecureText(!secureText)}
-                    size={20}
+                    size={30}
                     color="grey"
-                    name={secureText === true ? 'eye-slash' : 'eye'}
+                    name={secureText === true ? 'md-eye' : 'md-eye-off-sharp'}
                 />
             )}
 
@@ -50,7 +50,10 @@ function useStyles() {
         },
         eyeIconStyle: {
             position: 'absolute',
-            right: 0,
+            bottom:0,
+            top:'36%',
+            right: '8%',
+            end: 0
         },
         pinTextStyle: {
             fontFamily: 'Urbanist-Regular',

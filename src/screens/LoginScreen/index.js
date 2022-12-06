@@ -33,7 +33,8 @@ const LoginScreen = (props) => {
                 placeHolder={"Password"}
                 control={control}
                 name={"Password"}
-                rules={"Rules"} />
+                rules={"Rules"}
+                inputStyle={styles.passwordstyle} />
             <PipButton title={"Get Started"} btnStyle={styles.bottomView} />
         </View>
     );
