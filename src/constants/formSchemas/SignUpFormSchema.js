@@ -13,7 +13,7 @@ export const SignUpFormSchema = {
     },
   },
   password: {
-    title: 'registerUser.signUpFormTitles.password',
+    title: 'Password',
     name: 'password',
     rules: {
       required: 'common.required',

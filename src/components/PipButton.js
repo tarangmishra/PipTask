@@ -17,7 +17,7 @@ const PipButton = ({title, onPress, loading, buttonStyle, btnStyle}) => {
       onPress={onPress}>
       {loading ? (
         <View style={[styles.titleStyle, styles.loaderBackgroundStyle]}>
-          <ActivityIndicator color={'white'} />
+          <ActivityIndicator color={'blue'} />
         </View>
       ) : (
         <Text style={styles.titleStyle}>{title}</Text>

@@ -40,6 +40,13 @@ function useStyles() {
             position: 'absolute',
             bottom: 0,
         },
+        bottomViewSingin: {
+            width: '80%',
+            justifyContent: 'center',
+            alignItems: 'center',
+            position: 'absolute',
+            bottom: '7%',
+        },
         disbaleTextInput: {
             backgroundColor: PipColors.pipdisbalegry
         },
@@ -47,6 +54,17 @@ function useStyles() {
             color: 'black',
             fontSize: 15,
             fontFamily: 'Urbanist-Bold'
+        },
+        forgotPassword: {
+            fontFamily: 'Urbanist-Bold',
+            fontSize: 12,
+            marginStart: 12,
+            marginTop: '3%'
+        },
+        validpassword: {
+            color: 'red',
+            marginStart: 12,
+            fontFamily: 'Urbanist-Regular'
         }
     })
 }

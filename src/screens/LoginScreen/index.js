@@ -12,10 +12,13 @@ import { ErrorMessage } from '@hookform/error-message';
 const LoginScreen = (props) => {
     const styles = useStyles();
     const route = useRoute();
-    const { control, formState: { errors }, handleSubmit, setValue, getValues } = useForm();
+    const { control, formState: { errors }, handleSubmit } = useForm();
+
+    const SignIn = async form => {
+        {console.log("props ", form.password)}
+    }
     return (
         <View style={styles.container}>
-            {console.log("props ", route.params.email)}
             <PipText title={i18n.t('translation.Pentair')} orgStyle={styles.titleStyle} />
             <View style={styles.line} />
             <PipText title={i18n.t('translation.AlreadyAccount')} orgStyle={styles.welcomestyle} />
@@ -25,17 +28,24 @@ const LoginScreen = (props) => {
                 editable={false}
                 control={control}
                 inputStyle={styles.disbaleTextInput}
-                placeHolder= {route.params.email}
+                placeHolder={route.params.email}
                 name={"email"}
                 rules={"email"} />
             <FormInputPasswordField
-                title={"Password"}
-                placeHolder={"Password"}
+                title={SignUpFormSchema.password.title}
+                placeHolder={SignUpFormSchema.password.title}
                 control={control}
-                name={"Password"}
-                rules={"Rules"}
+                name={SignUpFormSchema.password.name}
+                rules={SignUpFormSchema.password.rules}
                 inputStyle={styles.passwordstyle} />
-            <PipButton title={"Get Started"} btnStyle={styles.bottomView} />
+            <ErrorMessage
+                errors={errors}
+                name={SignUpFormSchema.password.name}
+                render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validpassword')} />}
+            />
+            <PipText title={i18n.t('translation.ForgotPassword')} orgStyle={styles.forgotPassword} />
+            <PipButton onPress={handleSubmit(SignIn)} title={i18n.t('translation.Signinbutton')} btnStyle={styles.bottomViewSingin} />
+            <PipButton title={i18n.t('translation.Switchaccount')} buttonStyle={styles.bottomView} />
         </View>
     );
 }

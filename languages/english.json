@@ -15,7 +15,10 @@
         "AlreadyAccount": "Looks like you already\nhave a Pentair account",
         "Signin": "Sign in to go to your account",
         "ForgotPassword": "Forgot Password?",
+        "Validemail": "Enter a valid email",
         "Validpassword": "Enter a valid password",
+        "Signinbutton": "Sign in",
+        "Switchaccount": "Switch Account",
         "registerUser": {
             "signUpFormTitles": {
                 "email": "Email address",

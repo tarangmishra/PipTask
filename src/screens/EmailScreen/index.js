@@ -32,7 +32,7 @@ const EmailScreen = () => {
             <ErrorMessage
                 errors={errors}
                 name={SignUpFormSchema.email.name}
-                render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validpassword')} />}
+                render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validemail')} />}
             />
             <PipButton onPress={handleSubmit(onSubmit)} title={"Get Started"} btnStyle={styles.bottomView} />
         </View>
