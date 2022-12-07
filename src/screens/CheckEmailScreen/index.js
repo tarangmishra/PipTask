@@ -91,7 +91,7 @@ const CheckEmailScreen = () => {
                 render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validemail')} />}
             />
             <PipButton onPress={() => { setModalVisible(true) }} title={"Reset"} btnStyle={styles.bottomViewSingin} />
-            <PipButton  title={i18n.t('translation.Resend')} btnStyle={styles.bottomView} />
+            <PipButton whiteBackground={true}  title={i18n.t('translation.Resend')} btnStyle={styles.bottomView} />
             {modalVisible === true ? <PipModal modalVisible={modalVisible} setModalVisible={setModalVisible} /> : null}
         </View>
     );

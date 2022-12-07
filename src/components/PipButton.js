@@ -6,14 +6,13 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { PipColors } from '../utils/colors';
-import {ScaledSheet} from 'react-native-size-matters'
+import { ScaledSheet } from 'react-native-size-matters'
 
-const PipButton = ({title, onPress, loading, buttonStyle, btnStyle}) => {
-  const styles = useStyles();
-
+const PipButton = ({ title, onPress, loading, buttonStyle, btnStyle, whiteBackground }) => {
+  const styles = useStyles(whiteBackground);
   return (
     <TouchableOpacity
-      style={[styles.buttonStyle, buttonStyle,btnStyle]}
+      style={[styles.buttonStyle, buttonStyle, btnStyle]}
       onPress={onPress}>
       {loading ? (
         <View style={[styles.titleStyle, styles.loaderBackgroundStyle]}>
@@ -26,7 +25,7 @@ const PipButton = ({title, onPress, loading, buttonStyle, btnStyle}) => {
   );
 };
 
-function useStyles() {
+function useStyles(whiteBackground) {
   return ScaledSheet.create({
     buttonStyle: {
       alignSelf: 'center',
@@ -36,9 +35,9 @@ function useStyles() {
       minWidth: '100%',
       alignSelf: 'center',
       textAlign: 'center',
-      backgroundColor: PipColors.pipbuttonColor,
+      backgroundColor: whiteBackground ? 'white' : PipColors.pipbuttonColor,
       paddingVertical: '3%',
-      color: 'white',
+      color: whiteBackground ? PipColors.pipbuttonColor : 'white',
       fontSize: '15@s',
       borderRadius: '10@s',
       fontFamily: 'Urbanist-Bold',

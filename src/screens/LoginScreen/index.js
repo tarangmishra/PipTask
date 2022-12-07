@@ -52,7 +52,7 @@ const LoginScreen = (props) => {
             <PipText title={i18n.t('translation.ForgotPassword')} orgStyle={styles.forgotPassword} />
             </TouchableOpacity>
             <PipButton onPress={handleSubmit(SignIn)} title={i18n.t('translation.Signinbutton')} btnStyle={styles.bottomViewSingin} />
-            <PipButton title={i18n.t('translation.Switchaccount')} buttonStyle={styles.bottomView} />
+            <PipButton whiteBackground={true} title={i18n.t('translation.Switchaccount')} buttonStyle={styles.bottomView} />
         </KeyboardAvoidingView>
     );
 }
