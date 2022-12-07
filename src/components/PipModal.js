@@ -1,36 +1,37 @@
-import React, { useState } from 'react';
-import {
-    Button,
-    Image, Modal, Text, View
-} from 'react-native';
+import React from 'react';
+import { Image, Modal, View } from 'react-native';
 import { PipColors } from '../utils/colors';
 import { ScaledSheet } from 'react-native-size-matters'
 import success from '../images/accept.png'
 import { i18n } from 'react-native-i18n-localize'
 import { PipButton, PipText } from '.';
 
-const PipModal = ({ modalVisible }) => {
-    // const [modalVisible, setModalVisible] = useState(false);
+const PipModal = ({ modalVisible, setModalVisible }) => {
     const styles = useStyles();
     return (
         <Modal animationType="slide" transparent={true} visible={modalVisible}>
             <>
-                <View style={styles.centeredView}>
-                    <Image style={styles.imageStyle} source={success} />
-                    <PipText title={i18n.t('translation.PasswordChanged')} orgStyle={styles.modalText}/>
-                    <PipText title={i18n.t('translation.PasswordChangeSuccess')} orgStyle={styles.passwordSuccessText}/>
-                    <PipButton title={i18n.t('translation.Continue')} />
+                <View style={styles.container}>
+                    <View style={styles.centeredView}>
+                        <Image style={styles.imageStyle} source={success} />
+                        <PipText title={i18n.t('translation.PasswordChanged')} orgStyle={styles.modalText} />
+                        <PipText title={i18n.t('translation.PasswordChangeSuccess')} orgStyle={styles.passwordSuccessText} />
+                        <PipButton onPress={() => { setModalVisible(!modalVisible) }} title={i18n.t('translation.Continue')} />
+                    </View>
                 </View>
             </>
         </Modal>
     );
 };
-
 function useStyles() {
     return ScaledSheet.create({
+        container: {
+            flex: 1,
+            backgroundColor: PipColors.pipbuttonColor,
+            height: '100%'
+        },
         centeredView: {
             position: 'absolute',
-            flex: 1,
             width: '100%',
             height: '32%',
             backgroundColor: "white",

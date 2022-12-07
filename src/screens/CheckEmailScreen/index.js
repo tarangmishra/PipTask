@@ -68,7 +68,7 @@ const CheckEmailScreen = () => {
             />
             <PipButton onPress={() => {setModalVisible(true)}} title={"Reset"} btnStyle={styles.bottomView} />
             
-            {modalVisible===true ? <PipModal modalVisible={modalVisible}/> : null}
+            {modalVisible===true ? <PipModal modalVisible={modalVisible} setModalVisible={setModalVisible}/> : null}
 
         </View>
     );
