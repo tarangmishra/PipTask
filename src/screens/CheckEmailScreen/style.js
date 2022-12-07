@@ -40,6 +40,13 @@ function useStyles() {
             position: 'absolute',
             bottom: 0,
         },
+        bottomViewSingin: {
+            width: '80%',
+            justifyContent: 'center',
+            alignItems: 'center',
+            position: 'absolute',
+            bottom: '7%',
+        },
         validpassword: {
             color: 'red',
             marginStart: '12@s',
@@ -48,7 +55,7 @@ function useStyles() {
         sixdigitStyle: {
             justifyContent: 'center',
             alignSelf: 'center',
-            marginTop: '8%',
+            marginTop: '3%',
             marginStart: '12@s',
             fontFamily: 'Urbanist-Bold',
             fontSize: '15@s',

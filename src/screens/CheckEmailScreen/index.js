@@ -90,10 +90,9 @@ const CheckEmailScreen = () => {
                 name={SignUpFormSchema.confirmpassword.name}
                 render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validemail')} />}
             />
-            <PipButton onPress={() => { setModalVisible(true) }} title={"Reset"} btnStyle={styles.bottomView} />
-
+            <PipButton onPress={() => { setModalVisible(true) }} title={"Reset"} btnStyle={styles.bottomViewSingin} />
+            <PipButton  title={i18n.t('translation.Resend')} btnStyle={styles.bottomView} />
             {modalVisible === true ? <PipModal modalVisible={modalVisible} setModalVisible={setModalVisible} /> : null}
-
         </View>
     );
 }
