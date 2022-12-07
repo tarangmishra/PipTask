@@ -2,11 +2,11 @@ import React from 'react';
 import {
   TouchableOpacity,
   Text,
-  StyleSheet,
   View,
   ActivityIndicator,
 } from 'react-native';
 import { PipColors } from '../utils/colors';
+import {ScaledSheet} from 'react-native-size-matters'
 
 const PipButton = ({title, onPress, loading, buttonStyle, btnStyle}) => {
   const styles = useStyles();
@@ -27,7 +27,7 @@ const PipButton = ({title, onPress, loading, buttonStyle, btnStyle}) => {
 };
 
 function useStyles() {
-  return StyleSheet.create({
+  return ScaledSheet.create({
     buttonStyle: {
       alignSelf: 'center',
       margin: '4%',
@@ -39,8 +39,8 @@ function useStyles() {
       backgroundColor: PipColors.pipBlue,
       paddingVertical: '3%',
       color: 'white',
-      fontSize: 15,
-      borderRadius: 10,
+      fontSize: '15@s',
+      borderRadius: '10@s',
       fontFamily: 'Urbanist-Bold',
       overflow: 'hidden',
     },

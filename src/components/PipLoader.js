@@ -1,7 +1,8 @@
 import {useTheme} from '@react-navigation/native';
 import React from 'react';
-import {StyleSheet, View, ActivityIndicator, Modal} from 'react-native';
+import {View, ActivityIndicator, Modal} from 'react-native';
 import { PipColors } from '../utils/colors';
+import {ScaledSheet} from 'react-native-size-matters'
 
 const PipLoader = ({isVisible}) => {
   const {dark} = useTheme();
@@ -19,9 +20,9 @@ const PipLoader = ({isVisible}) => {
 };
 
 function useStyles(dark) {
-  return StyleSheet.create({
+  return ScaledSheet.create({
     container: {
-      zIndex: 30,
+      zIndex: '30@s',
       position: 'absolute',
       top: 0,
       bottom: 0,
@@ -35,7 +36,7 @@ function useStyles(dark) {
       justifyContent: 'center',
       margin: '2%',
       color: dark ? PipColors.pure_black : 'white',
-      borderRadius: 10,
+      borderRadius: '10@s',
       overflow: 'hidden',
       fontFamily: 'Urbanist-Regular',
       backgroundColor: dark ? '#ffffff26' : '#00000033',

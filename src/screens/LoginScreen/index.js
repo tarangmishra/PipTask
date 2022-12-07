@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import { View } from 'react-native'
+import { View, KeyboardAvoidingView } from 'react-native'
 import { PipButton, PipText } from '../../components'
 import useStyles from './style'
 import { FormInputEmailField, FormInputPasswordField } from '../../../src/components/form'
@@ -15,22 +15,22 @@ const LoginScreen = (props) => {
     const { control, formState: { errors }, handleSubmit } = useForm();
 
     const SignIn = async form => {
-        {console.log("props ", form.password)}
+        { console.log("props ", form.password) }
     }
     return (
-        <View style={styles.container}>
+        <KeyboardAvoidingView style={styles.container}>
             <PipText title={i18n.t('translation.Pentair')} orgStyle={styles.titleStyle} />
             <View style={styles.line} />
             <PipText title={i18n.t('translation.AlreadyAccount')} orgStyle={styles.welcomestyle} />
             <PipText title={i18n.t('translation.Signin')} orgStyle={styles.hintStyle} />
             <FormInputEmailField
-                title={"Email"}
+                title={SignUpFormSchema.email.title}
                 editable={false}
                 control={control}
                 inputStyle={styles.disbaleTextInput}
                 placeHolder={route.params.email}
-                name={"email"}
-                rules={"email"} />
+                name={SignUpFormSchema.email.name}
+                rules={SignUpFormSchema.email.rules} />
             <FormInputPasswordField
                 title={SignUpFormSchema.password.title}
                 placeHolder={SignUpFormSchema.password.title}
@@ -46,7 +46,7 @@ const LoginScreen = (props) => {
             <PipText title={i18n.t('translation.ForgotPassword')} orgStyle={styles.forgotPassword} />
             <PipButton onPress={handleSubmit(SignIn)} title={i18n.t('translation.Signinbutton')} btnStyle={styles.bottomViewSingin} />
             <PipButton title={i18n.t('translation.Switchaccount')} buttonStyle={styles.bottomView} />
-        </View>
+        </KeyboardAvoidingView>
     );
 }
 export default LoginScreen;

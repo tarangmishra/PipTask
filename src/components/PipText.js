@@ -1,6 +1,7 @@
 import React from 'react';
-import {Text, StyleSheet} from 'react-native';
+import {Text} from 'react-native';
 import { PipColors } from '../utils/colors';
+import {ScaledSheet} from 'react-native-size-matters'
 
 const PipText = ({title,titleStyle,orgStyle}) => {
   const styles = useStyles();
@@ -8,11 +9,11 @@ const PipText = ({title,titleStyle,orgStyle}) => {
   return <Text style={[styles.textStyle,titleStyle,orgStyle]}>{title}</Text>;
 };
 function useStyles() {
-  return StyleSheet.create({
+  return ScaledSheet.create({
     textStyle: {
       color: PipColors.pipBlue,
       fontFamily: 'Urbanist-Regular',
-      fontSize:15,
+      fontSize:'15@s',
     }
   });
 }

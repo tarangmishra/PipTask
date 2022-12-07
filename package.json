@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@hookform/error-message": "^2.0.0",
     "@react-native-async-storage/async-storage": "^1.15.11",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/stack": "^6.0.11",
@@ -22,14 +23,13 @@
     "react-native-gesture-handler": "^1.10.3",
     "react-native-i18n-localize": "^1.0.4",
     "react-native-link": "^4.1.0",
-    "react-native-reanimated": "^2.2.3",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.9.0",
+    "react-native-size-matters": "^0.4.0",
     "react-native-swiper": "^1.6.0",
     "react-native-swiper-flatlist": "^3.0.16",
     "react-native-vector-icons": "^9.0.0",
-    "react-navigation-transitions": "^1.0.12",
-    "@hookform/error-message": "^2.0.0"
+    "react-navigation-transitions": "^1.0.12"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

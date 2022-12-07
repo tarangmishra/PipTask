@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { View, TextInput, Text, StyleSheet } from 'react-native';
+import { View, TextInput, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import globleStyle from './style'
 import { useTheme } from '@react-navigation/native';
 import { PipColors } from '../utils/colors';
-
+import {ScaledSheet} from 'react-native-size-matters'
 
 const PipEditText = props => {
     const styles = useStyles(props.isPin || false);
@@ -43,9 +43,9 @@ const PipEditText = props => {
 };
 
 function useStyles() {
-    return StyleSheet.create({
+    return ScaledSheet.create({
         passwordTextStyle: {
-            letterSpacing: 2,
+            letterSpacing: '2@s',
             fontFamily: 'Urbanist-Regular',
         },
         eyeIconStyle: {
@@ -57,10 +57,10 @@ function useStyles() {
         },
         pinTextStyle: {
             fontFamily: 'Urbanist-Regular',
-            borderWidth: 1,
+            borderWidth: '1@s',
             borderColor: PipColors.pipGrey,
-            borderRadius: 10,
-            fontSize: 20,
+            borderRadius: '10@s',
+            fontSize: '20@s',
             fontWeight: '700',
             padding: '2%',
             paddingHorizontal: '3%',

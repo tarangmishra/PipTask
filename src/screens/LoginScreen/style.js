@@ -1,8 +1,8 @@
-import { StyleSheet } from "react-native";
 import { PipColors } from "../../utils/colors";
+import {ScaledSheet} from 'react-native-size-matters'
 
 function useStyles() {
-    return StyleSheet.create({
+    return ScaledSheet.create({
         container: {
             flex: 1
         },
@@ -11,26 +11,26 @@ function useStyles() {
             alignSelf: 'center',
             marginTop: '15%',
             fontFamily: 'Urbanist-Bold',
-            fontSize: 15,
+            fontSize: '15@s',
         },
         line: {
             borderBottomColor: PipColors.pipGrey,
-            borderBottomWidth: 2,
-            marginTop: 15
+            borderBottomWidth: '2@s',
+            marginTop: '15@s'
         },
         welcomestyle: {
             marginTop: '3%',
             fontFamily: 'Urbanist-Bold',
-            fontSize: 25,
-            marginStart: 12,
-            letterSpacing: -0
+            fontSize: '25@s',
+            marginStart: '12@s',
+            letterSpacing: '-0@s'
         },
         hintStyle: {
             fontSize: 12,
             color: PipColors.pipGrey,
             fontFamily: 'Urbanist-Regular',
             marginTop: '3%',
-            marginStart: 12,
+            marginStart: '12@s',
             marginBottom: '3%'
         },
         bottomView: {
@@ -52,18 +52,18 @@ function useStyles() {
         },
         passwordstyle: {
             color: 'black',
-            fontSize: 15,
+            fontSize: '15@s',
             fontFamily: 'Urbanist-Bold'
         },
         forgotPassword: {
             fontFamily: 'Urbanist-Bold',
-            fontSize: 12,
-            marginStart: 12,
+            fontSize: '12@s',
+            marginStart: '12@s',
             marginTop: '3%'
         },
         validpassword: {
             color: 'red',
-            marginStart: 12,
+            marginStart: '12@s',
             fontFamily: 'Urbanist-Regular'
         }
     })
