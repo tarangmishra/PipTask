@@ -7,6 +7,7 @@ import { PipColors } from '../utils/colors';
 import { ScaledSheet } from 'react-native-size-matters'
 import success from '../images/accept.png'
 import { i18n } from 'react-native-i18n-localize'
+import { PipButton, PipText } from '.';
 
 const PipModal = ({ modalVisible }) => {
     // const [modalVisible, setModalVisible] = useState(false);
@@ -15,12 +16,10 @@ const PipModal = ({ modalVisible }) => {
         <Modal animationType="slide" transparent={true} visible={modalVisible}>
             <>
                 <View style={styles.centeredView}>
-
                     <Image style={styles.imageStyle} source={success} />
-                    <Text style={styles.modalText}>{i18n.t('translation.PasswordChanged')}</Text>
-                    <Text style={styles.passwordSuccessText}>{i18n.t('translation.PasswordChangeSuccess')}</Text>
-                    <Button onPress={()=>{!modalVisible}} title='Continue' style={styles.button} />
-
+                    <PipText title={i18n.t('translation.PasswordChanged')} orgStyle={styles.modalText}/>
+                    <PipText title={i18n.t('translation.PasswordChangeSuccess')} orgStyle={styles.passwordSuccessText}/>
+                    <PipButton title={i18n.t('translation.Continue')} />
                 </View>
             </>
         </Modal>
@@ -33,7 +32,7 @@ function useStyles() {
             position: 'absolute',
             flex: 1,
             width: '100%',
-            height: '35%',
+            height: '32%',
             backgroundColor: "white",
             bottom: 0,
             padding: '35@s',
@@ -47,17 +46,22 @@ function useStyles() {
         imageStyle: {
             width: '25%',
             height: '25%',
-            alignSelf: 'center'
+            alignSelf: 'center',
+            resizeMode: 'contain'
         },
         modalText: {
             marginTop: '12@s',
             textAlign: "center",
-            fontSize: '18@s'
+            fontSize: '15@s',
+            color: PipColors.pipGreen,
+            fontFamily: 'Urbanist-Bold'
         },
         passwordSuccessText: {
-            marginTop: '10@s',
+            margin: '10@s',
             textAlign: "center",
-            fontSize: '13@s'
+            fontSize: '13@s',
+            color: PipColors.piphintclor,
+            fontFamily: 'Urbanist-Bold'
         },
         button: {
             position: 'absolute',

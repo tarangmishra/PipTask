@@ -29,6 +29,7 @@
         "Resend": "Re-Send Code" ,
         "PasswordChanged": "Password Changed",
         "PasswordChangeSuccess": "Your password has been successfully\nchanged",
+        "Continue": "Continue",
         "registerUser": {
             "signUpFormTitles": {
                 "email": "Email address",
