@@ -23,5 +23,27 @@ export const SignUpFormSchema = {
       },
     },
   },
+  newpassword: {
+    title: 'New Password',
+    name: 'password',
+    rules: {
+      required: 'common.required',
+      pattern: {
+        value: PASSWORD_REGEX,
+        message: 'registerUser.signUpFormErrorMessages.password',
+      },
+    },
+  },
+  confirmpassword: {
+    title: 'Confirm New Password',
+    name: 'password',
+    rules: {
+      required: 'common.required',
+      pattern: {
+        value: PASSWORD_REGEX,
+        message: 'registerUser.signUpFormErrorMessages.password',
+      },
+    },
+  },
 }
 

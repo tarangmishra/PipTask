@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, FlatList } from 'react-native'
 import { PipButton, PipText, PipModal } from '../../components'
 import useStyles from './style'
 import { FormInputPasswordField } from '../../../src/components/form'
@@ -15,9 +15,12 @@ import {
     useBlurOnFulfill,
     useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
+import { PipColors } from '../../utils/colors'
+
 
 const CELL_COUNT = 6;
 const CheckEmailScreen = () => {
+    const datas = ["At least 8 character", "1 uppercase and 1 smaller case required", "1 number", "1 special character"]
     const [modalVisible, setModalVisible] = useState(false);
     const styles = useStyles();
     const route = useRoute();
@@ -55,20 +58,41 @@ const CheckEmailScreen = () => {
                 )}
             />
             <FormInputPasswordField
-                title={SignUpFormSchema.password.title}
-                placeHolder={SignUpFormSchema.password.title}
+                title={SignUpFormSchema.newpassword.title}
+                placeHolder={SignUpFormSchema.newpassword.title}
                 control={control}
-                name={SignUpFormSchema.password.name}
-                rules={SignUpFormSchema.password.rules}
+                name={SignUpFormSchema.newpassword.name}
+                rules={SignUpFormSchema.newpassword.rules}
                 inputStyle={styles.passwordstyle} />
             <ErrorMessage
                 errors={errors}
-                name={SignUpFormSchema.email.name}
+                name={SignUpFormSchema.newpassword.name}
                 render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validemail')} />}
             />
-            <PipButton onPress={() => {setModalVisible(true)}} title={"Reset"} btnStyle={styles.bottomView} />
-            
-            {modalVisible===true ? <PipModal modalVisible={modalVisible} setModalVisible={setModalVisible}/> : null}
+            <View style={styles.centerview}>
+                <FlatList data={datas} renderItem={({ item }) => {
+                    return (
+                        <>
+                            <PipText orgStyle={styles.flatText} title={item} />
+                        </>
+                    );
+                }} />
+            </View>
+            <FormInputPasswordField
+                title={SignUpFormSchema.confirmpassword.title}
+                placeHolder={SignUpFormSchema.confirmpassword.title}
+                control={control}
+                name={SignUpFormSchema.confirmpassword.name}
+                rules={SignUpFormSchema.confirmpassword.rules}
+                inputStyle={styles.passwordstyle} />
+            <ErrorMessage
+                errors={errors}
+                name={SignUpFormSchema.confirmpassword.name}
+                render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validemail')} />}
+            />
+            <PipButton onPress={() => { setModalVisible(true) }} title={"Reset"} btnStyle={styles.bottomView} />
+
+            {modalVisible === true ? <PipModal modalVisible={modalVisible} setModalVisible={setModalVisible} /> : null}
 
         </View>
     );

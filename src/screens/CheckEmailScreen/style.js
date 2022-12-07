@@ -73,7 +73,14 @@ function useStyles() {
         focusCell: {
             borderColor: PipColors.pipbuttonColor,
         },
-
+        centerview: {
+            marginStart: '12@s',
+            marginBottom: '10@s',
+            padding: '8@s'
+        },
+        flatText: {
+          color: PipColors.piphintclor
+        }
     })
 }
 export default useStyles;
