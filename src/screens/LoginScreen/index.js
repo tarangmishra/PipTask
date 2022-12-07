@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from 'react'
-import { View, KeyboardAvoidingView } from 'react-native'
+import React from 'react'
+import { View, KeyboardAvoidingView, TouchableOpacity } from 'react-native'
 import { PipButton, PipText } from '../../components'
 import useStyles from './style'
 import { FormInputEmailField, FormInputPasswordField } from '../../../src/components/form'
@@ -8,14 +8,19 @@ import { useRoute } from '@react-navigation/native'
 import { i18n } from 'react-native-i18n-localize'
 import { SignUpFormSchema } from '../../constants/formSchemas/SignUpFormSchema';
 import { ErrorMessage } from '@hookform/error-message';
+import { useNavigation } from '@react-navigation/native'
 
 const LoginScreen = (props) => {
     const styles = useStyles();
     const route = useRoute();
+    const navigation = useNavigation();
     const { control, formState: { errors }, handleSubmit } = useForm();
 
     const SignIn = async form => {
         { console.log("props ", form.password) }
+    }
+    const onSubmit = () => {
+         navigation.navigate('ForgotPasswordScreen', { email: route.params.email })
     }
     return (
         <KeyboardAvoidingView style={styles.container}>
@@ -43,7 +48,9 @@ const LoginScreen = (props) => {
                 name={SignUpFormSchema.password.name}
                 render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validpassword')} />}
             />
+            <TouchableOpacity onPress={onSubmit}>
             <PipText title={i18n.t('translation.ForgotPassword')} orgStyle={styles.forgotPassword} />
+            </TouchableOpacity>
             <PipButton onPress={handleSubmit(SignIn)} title={i18n.t('translation.Signinbutton')} btnStyle={styles.bottomViewSingin} />
             <PipButton title={i18n.t('translation.Switchaccount')} buttonStyle={styles.bottomView} />
         </KeyboardAvoidingView>

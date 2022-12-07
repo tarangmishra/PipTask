@@ -1,14 +1,10 @@
 import React from 'react';
-import { useColorScheme } from 'react-native';
-import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-import { HomeScreen, EmailScreen, LoginScreen } from './../screens';
-import { PipColors } from '../utils/colors';
+import { HomeScreen, EmailScreen, LoginScreen, ForgotPasswordScreen, CheckEmailScreen } from './../screens';
 const Stack = createStackNavigator();
 
 const RootNavigator = () => {
-    const scheme = useColorScheme();
 
     const Screens = (
         <>
@@ -24,28 +20,21 @@ const RootNavigator = () => {
                 component={LoginScreen}
                 name='LoginScreen'
                 options={{ headerShown: false }} />
+            <Stack.Screen
+                component={ForgotPasswordScreen}
+                name="ForgotPasswordScreen"
+                options={{ headerShown: false }} />
+
+            <Stack.Screen
+                component={CheckEmailScreen}
+                name="CheckEmailScreen"
+                options={{ headerShown: false }} />
         </>
     );
 
-    const lightTheme = {
-        ...DefaultTheme,
-        colors: {
-            ...DefaultTheme.colors,
-            background: PipColors.pure_white,
-        },
-    };
-
-    const darkTheme = {
-        ...DarkTheme,
-        colors: {
-            ...DarkTheme.colors,
-            background: PipColors.pure_black,
-        },
-    };
-
     return (
 
-        <NavigationContainer theme={scheme === 'dark' ? darkTheme : lightTheme}>
+        <NavigationContainer>
             <Stack.Navigator
                 screenOptions={{
                     headerShown: true,

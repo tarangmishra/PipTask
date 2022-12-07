@@ -39,12 +39,12 @@ function useStyles(width) {
             marginTop: '3%',
             fontSize: '12@s',
             marginStart: '12@s',
-            color: PipColors.pipDisableText,
+            color: PipColors.piphintclor,
             fontFamily: 'Urbanist-Regular',
         },
         btnStyle: {
             position: 'absolute',
-            bottom: 0
+            bottom: 0,
         }
     })
 }

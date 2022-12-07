@@ -8,8 +8,8 @@ function useStyles() {
         },
         titleStyle: {
             justifyContent: 'center',
-            alignSelf: 'center',
             marginTop: '15%',
+            marginStart: '12@s',
             fontFamily: 'Urbanist-Bold',
             fontSize: '15@s',
         },

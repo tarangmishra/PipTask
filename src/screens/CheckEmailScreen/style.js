@@ -1,5 +1,5 @@
 import { PipColors } from "../../utils/colors";
-import {ScaledSheet} from 'react-native-size-matters'
+import { ScaledSheet } from 'react-native-size-matters'
 
 function useStyles() {
     return ScaledSheet.create({
@@ -8,8 +8,8 @@ function useStyles() {
         },
         titleStyle: {
             justifyContent: 'center',
-            alignSelf: 'center',
             marginTop: '15%',
+            marginStart: '12@s',
             fontFamily: 'Urbanist-Bold',
             fontSize: '15@s',
         },
@@ -44,7 +44,36 @@ function useStyles() {
             color: 'red',
             marginStart: '12@s',
             fontFamily: 'Urbanist-Regular'
-        }
+        },
+        sixdigitStyle: {
+            justifyContent: 'center',
+            alignSelf: 'center',
+            marginTop: '8%',
+            marginStart: '12@s',
+            fontFamily: 'Urbanist-Bold',
+            fontSize: '15@s',
+            color: 'black'
+        },
+        codeFieldRoot: {
+            marginTop: '3%',
+            marginStart: '12@s',
+            marginEnd: '12@s',
+            marginBottom: '8%'
+        },
+        cell: {
+            width: '40@s',
+            height: '50@s',
+            lineHeight: '38@s',
+            fontSize: '24@s',
+            borderWidth: '2@s',
+            borderColor: '#00000030',
+            borderRadius: '10@s',
+            textAlign: 'center',
+        },
+        focusCell: {
+            borderColor: PipColors.pipbuttonColor,
+        },
+
     })
 }
 export default useStyles;

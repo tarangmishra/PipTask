@@ -20,6 +20,7 @@
     "react-hook-form": "^7.19.3",
     "react-i18next": "^11.15.5",
     "react-native": "0.70.6",
+    "react-native-confirmation-code-field": "^7.3.1",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-i18n-localize": "^1.0.4",
     "react-native-link": "^4.1.0",

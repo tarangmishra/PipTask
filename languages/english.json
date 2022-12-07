@@ -19,6 +19,16 @@
         "Validpassword": "Enter a valid password",
         "Signinbutton": "Sign in",
         "Switchaccount": "Switch Account",
+        "ForgotPasswordHint": "No worries, we'll send a verification code\nto your email to reset your password.",
+        "Checkyouremail": "Check Your Email",
+        "CheckEmailHint": "We've sent you an email with a 6-digit\ncode. Please check your email and enter\nthe code below.",
+        "Sixdigitcode": "6-digit-code",
+        "NewPassword": "New Password",
+        "ConfirmNewPassword": "ConfirmNewPassword",
+        "Submit": "Submit",
+        "Resend": "Re-Send Code" ,
+        "PasswordChanged": "Password Changed",
+        "PasswordChangeSuccess": "Your password has been successfully\nchanged",
         "registerUser": {
             "signUpFormTitles": {
                 "email": "Email address",
