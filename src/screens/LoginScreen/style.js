@@ -26,8 +26,8 @@ function useStyles() {
             letterSpacing: '-0@s'
         },
         hintStyle: {
-            fontSize: 12,
-            color: PipColors.pipGrey,
+            fontSize: '15@s',
+            color: PipColors.piphintclor,
             fontFamily: 'Urbanist-Regular',
             marginTop: '3%',
             marginStart: '12@s',

@@ -36,6 +36,7 @@ function useStyles(whiteBackground) {
       alignSelf: 'center',
       textAlign: 'center',
       backgroundColor: whiteBackground ? 'white' : PipColors.pipbuttonColor,
+      borderColor: PipColors.pipbuttonColor, 
       paddingVertical: '3%',
       color: whiteBackground ? PipColors.pipbuttonColor : 'white',
       fontSize: '15@s',

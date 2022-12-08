@@ -20,7 +20,7 @@ const HomeScreen = () => {
     const swiper = useRef(null)
 
     const skipFunction = () => {
-        setCurrIndex(currIndex + 1)
+        setCurrIndex(3)
         swiper.current.scrollTo(currIndex, true);
     }
     const particularImageSelected = (item, index) => {
@@ -28,7 +28,7 @@ const HomeScreen = () => {
     }
     const FouthSlide = (item) => {
         return (
-            <View style={{flex:1}}>
+            <View style={{ flex: 1 }}>
                 <Image style={styles.imageStyle} source={item} />
                 <PipText orgStyle={styles.pentair} title={i18n.t('translation.Pentair')} />
                 <PipText orgStyle={styles.orgStyle} title={i18n.t('translation.Enjoy')} />
@@ -40,7 +40,7 @@ const HomeScreen = () => {
     return (
         <View style={styles.container}>
             <View style={styles.container}>
-                <Swiper showsPagination={pageIndex===3?false:true}
+                <Swiper showsPagination={pageIndex === 3 ? false : true}
                     paginationStyle={styles.pagination}
                     ref={swiper}
                     loop={false}
@@ -52,20 +52,20 @@ const HomeScreen = () => {
                     {images.map((item, index) => (
                         <>
                             {pageIndex === 0 ?
-                                <View style={{flex:1}}>
+                                <View style={{ flex: 1 }}>
                                     <Image style={styles.imageStyle} source={item} />
                                     <PipText orgStyle={styles.pentair} title={i18n.t('translation.Pentair')} />
                                     <PipText orgStyle={styles.orgStyle} title={i18n.t('translation.Water')} />
                                     <PipText orgStyle={styles.marksStyle} title={i18n.t('translation.Smart')} />
                                 </View>
                                 : pageIndex === 1 ?
-                                    <View style={{flex:1}}>
+                                    <View style={{ flex: 1 }}>
                                         <Image style={styles.imageStyle} source={item} />
                                         <PipText orgStyle={styles.pentair} title={i18n.t('translation.Pentair')} />
                                         <PipText orgStyle={styles.orgStyle} title={i18n.t('translation.ManageSystem')} />
                                         <PipText orgStyle={styles.marksStyle} title={i18n.t('translation.Status')} />
                                     </View> : pageIndex === 2 ?
-                                        <View style={{flex:1}}>
+                                        <View style={{ flex: 1 }}>
                                             <Image style={styles.imageStyle} source={item} />
                                             <PipText orgStyle={styles.pentair} title={i18n.t('translation.Pentair')} />
                                             <PipText orgStyle={styles.orgStyle} title={i18n.t('translation.Todo')} />

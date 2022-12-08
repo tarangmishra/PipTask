@@ -4,12 +4,12 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import globleStyle from './style'
 import { useTheme } from '@react-navigation/native';
 import { PipColors } from '../utils/colors';
-import {ScaledSheet} from 'react-native-size-matters'
+import { ScaledSheet } from 'react-native-size-matters'
 
 const PipEditText = props => {
     const styles = useStyles(props.isPin || false);
     const gStyle = globleStyle(useTheme().dark)
-    const { isPassword, title, placeHolder,editable, inputStyle } = props;
+    const { isPassword, title, placeHolder, editable, inputStyle } = props;
     const [secureText, setSecureText] = useState(isPassword || false);
 
     const textInputProps = {
@@ -34,7 +34,7 @@ const PipEditText = props => {
                     onPress={() => setSecureText(!secureText)}
                     size={30}
                     color="grey"
-                    name={secureText === true ? 'md-eye' : 'md-eye-off-sharp'}
+                    name={secureText === true ? 'eye-off' : 'eye'}
                 />
             )}
 
@@ -50,8 +50,8 @@ function useStyles() {
         },
         eyeIconStyle: {
             position: 'absolute',
-            bottom:0,
-            top:'36%',
+            bottom: 0,
+            top: '36%',
             right: '8%',
             end: 0
         },

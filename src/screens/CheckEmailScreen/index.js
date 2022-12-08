@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, FlatList } from 'react-native'
+import { View, Text, FlatList, KeyboardAvoidingView } from 'react-native'
 import { PipButton, PipText, PipModal } from '../../components'
 import useStyles from './style'
 import { FormInputPasswordField } from '../../../src/components/form'
@@ -32,8 +32,11 @@ const CheckEmailScreen = () => {
         value,
         setValue,
     });
+    const onReset = async form => {
+        setModalVisible(true)
+    }
     return (
-        <View style={styles.container}>
+        <KeyboardAvoidingView style={styles.container}>
             <PipText title={i18n.t('translation.Signinbutton')} orgStyle={styles.titleStyle} />
             <View style={styles.line} />
             <PipText title={i18n.t('translation.Checkyouremail')} orgStyle={styles.welcomestyle} />
@@ -67,7 +70,7 @@ const CheckEmailScreen = () => {
             <ErrorMessage
                 errors={errors}
                 name={SignUpFormSchema.newpassword.name}
-                render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validemail')} />}
+                render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validpassword')} />}
             />
             <View style={styles.centerview}>
                 <FlatList data={datas} renderItem={({ item }) => {
@@ -88,12 +91,12 @@ const CheckEmailScreen = () => {
             <ErrorMessage
                 errors={errors}
                 name={SignUpFormSchema.confirmpassword.name}
-                render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validemail')} />}
+                render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validpassword')} />}
             />
-            <PipButton onPress={() => { setModalVisible(true) }} title={"Reset"} btnStyle={styles.bottomViewSingin} />
-            <PipButton whiteBackground={true}  title={i18n.t('translation.Resend')} btnStyle={styles.bottomView} />
+            <PipButton onPress={handleSubmit(onReset)} title={"Reset"} btnStyle={styles.bottomViewSingin} />
+            <PipButton whiteBackground={true} title={i18n.t('translation.Resend')} btnStyle={styles.bottomView} />
             {modalVisible === true ? <PipModal modalVisible={modalVisible} setModalVisible={setModalVisible} /> : null}
-        </View>
+        </KeyboardAvoidingView>
     );
 }
 export default CheckEmailScreen;

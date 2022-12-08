@@ -8,7 +8,7 @@ function useStyles() {
         },
         titleStyle: {
             justifyContent: 'center',
-            marginTop: '15%',
+            marginTop: '8%',
             marginStart: '12@s',
             fontFamily: 'Urbanist-Bold',
             fontSize: '15@s',
@@ -26,12 +26,12 @@ function useStyles() {
             letterSpacing: '-0@s'
         },
         hintStyle: {
-            fontSize: '12@s',
+            fontSize: '15@s',
             color: PipColors.piphintclor,
             fontFamily: 'Urbanist-Regular',
-            marginTop: '3%',
+            marginTop: '2%',
             marginStart: '12@s',
-            marginBottom: '3%'
+            marginBottom: '2%'
         },
         bottomView: {
             width: '80%',
@@ -55,17 +55,17 @@ function useStyles() {
         sixdigitStyle: {
             justifyContent: 'center',
             alignSelf: 'center',
-            marginTop: '3%',
+            marginTop: '2%',
             marginStart: '12@s',
             fontFamily: 'Urbanist-Bold',
             fontSize: '15@s',
             color: 'black'
         },
         codeFieldRoot: {
-            marginTop: '3%',
+            marginTop: '4%',
             marginStart: '12@s',
             marginEnd: '12@s',
-            marginBottom: '8%'
+            marginBottom: '3%'
         },
         cell: {
             width: '40@s',
@@ -82,8 +82,8 @@ function useStyles() {
         },
         centerview: {
             marginStart: '12@s',
-            marginBottom: '10@s',
-            padding: '8@s'
+            marginBottom: '5@s',
+            padding: '2@s'
         },
         flatText: {
           color: PipColors.piphintclor
