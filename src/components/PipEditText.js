@@ -51,7 +51,7 @@ function useStyles() {
         eyeIconStyle: {
             position: 'absolute',
             bottom: 0,
-            top: '36%',
+            top: '45%',
             right: '8%',
             end: 0
         },

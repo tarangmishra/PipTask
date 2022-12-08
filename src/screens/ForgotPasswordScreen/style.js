@@ -8,10 +8,17 @@ function useStyles() {
         },
         titleStyle: {
             justifyContent: 'center',
-            marginTop: '15%',
+            marginTop: '16%',
             marginStart: '12@s',
             fontFamily: 'Urbanist-Bold',
             fontSize: '15@s',
+        },
+        eyeconStyle: {
+            justifyContent: 'center',
+            marginTop: '15%',
+            marginStart: '12@s',
+            fontFamily: 'Urbanist-Bold',
+            fontSize: '23@s'
         },
         line: {
             borderBottomColor: PipColors.pipGrey,

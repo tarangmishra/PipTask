@@ -23,7 +23,7 @@ const LoginScreen = (props) => {
         navigation.navigate('ForgotPasswordScreen', { email: route.params.email })
     }
     return (
-        <KeyboardAvoidingView style={styles.container}>
+        <KeyboardAvoidingView style={styles.container} behavior="padding">
             <PipText title={i18n.t('translation.Pentair')} orgStyle={styles.titleStyle} />
             <View style={styles.line} />
             <PipText title={i18n.t('translation.AlreadyAccount')} orgStyle={styles.welcomestyle} />

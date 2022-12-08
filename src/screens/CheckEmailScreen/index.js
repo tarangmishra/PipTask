@@ -16,6 +16,7 @@ import {
     useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
 import { PipColors } from '../../utils/colors'
+import Icon from 'react-native-vector-icons/Ionicons';
 
 
 const CELL_COUNT = 6;
@@ -37,7 +38,15 @@ const CheckEmailScreen = () => {
     }
     return (
         <KeyboardAvoidingView style={styles.container}>
-            <PipText title={i18n.t('translation.Signinbutton')} orgStyle={styles.titleStyle} />
+            <View style={{ flexDirection: 'row' }}>
+                <Icon
+                    style={styles.eyeconStyle}
+                    color={PipColors.pipbuttonColor}
+                    name={'chevron-back'}
+                    onPress={()=>{navigation.goBack()}}
+                />
+                <PipText title={i18n.t('translation.Signinbutton')} orgStyle={styles.titleStyle} />
+            </View>
             <View style={styles.line} />
             <PipText title={i18n.t('translation.Checkyouremail')} orgStyle={styles.welcomestyle} />
             <PipText title={i18n.t('translation.CheckEmailHint')} orgStyle={styles.hintStyle} />
