@@ -32,7 +32,7 @@ const CheckEmailScreen = () => {
         value,
         setValue,
     });
-    const onReset = async form => {
+    const onReset = () => {
         setModalVisible(true)
     }
     return (
@@ -93,7 +93,7 @@ const CheckEmailScreen = () => {
                 name={SignUpFormSchema.confirmpassword.name}
                 render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validpassword')} />}
             />
-            <PipButton onPress={handleSubmit(onReset)} title={"Reset"} btnStyle={styles.bottomViewSingin} />
+            <PipButton onPress={onReset} title={"Reset"} btnStyle={styles.bottomViewSingin} />
             <PipButton whiteBackground={true} title={i18n.t('translation.Resend')} btnStyle={styles.bottomView} />
             {modalVisible === true ? <PipModal modalVisible={modalVisible} setModalVisible={setModalVisible} /> : null}
         </KeyboardAvoidingView>

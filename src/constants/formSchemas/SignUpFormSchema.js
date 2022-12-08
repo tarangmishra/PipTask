@@ -36,7 +36,7 @@ export const SignUpFormSchema = {
   },
   confirmpassword: {
     title: 'Confirm New Password',
-    name: 'password',
+    name: 'passwords',
     rules: {
       required: 'common.required',
       pattern: {

@@ -87,7 +87,12 @@ function useStyles() {
         },
         flatText: {
           color: PipColors.piphintclor
-        }
+        },
+        passwordstyle: {
+            color: 'black',
+            fontSize: '15@s',
+            fontFamily: 'Urbanist-Bold'
+        },
     })
 }
 export default useStyles;
