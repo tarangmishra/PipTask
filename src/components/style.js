@@ -1,7 +1,7 @@
 import { PipColors } from "../utils/colors";
 import {ScaledSheet} from 'react-native-size-matters'
 
-function globleStyle(dark) {
+function globleStyle(dark,editable) {
   return ScaledSheet.create({
     inputTextStyle: {
       color: PipColors.pipDisableText,
@@ -16,7 +16,7 @@ function globleStyle(dark) {
       paddingStart: '15@s'
     },
     labelTextStyle: {
-      color: 'black',
+      color: editable? 'grey': 'black',
       fontFamily: 'Urbanist-Bold',
       fontSize: '15@s',
       marginStart: '10@s'

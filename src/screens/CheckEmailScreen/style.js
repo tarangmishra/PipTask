@@ -77,7 +77,7 @@ function useStyles() {
         cell: {
             width: '40@s',
             height: '50@s',
-            lineHeight: '38@s',
+            lineHeight: '48@s',
             fontSize: '24@s',
             borderWidth: '2@s',
             borderColor: '#00000030',

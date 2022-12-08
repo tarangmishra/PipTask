@@ -8,10 +8,9 @@ import { ScaledSheet } from 'react-native-size-matters'
 
 const PipEditText = props => {
     const styles = useStyles(props.isPin || false);
-    const gStyle = globleStyle(useTheme().dark)
-    const { isPassword, title, placeHolder, editable, inputStyle } = props;
+    const { isPassword, title, placeHolder, editable, inputStyle, emailedittitle } = props;
     const [secureText, setSecureText] = useState(isPassword || false);
-
+    const gStyle = globleStyle(useTheme().dark,emailedittitle)
     const textInputProps = {
         ...props,
     };
@@ -42,7 +41,7 @@ const PipEditText = props => {
     );
 };
 
-function useStyles() {
+function useStyles(editable) {
     return ScaledSheet.create({
         passwordTextStyle: {
             letterSpacing: '2@s',
@@ -65,7 +64,7 @@ function useStyles() {
             padding: '2%',
             paddingHorizontal: '3%',
             textAlign: 'center',
-        },
+        }
     });
 }
 

@@ -28,26 +28,31 @@ const LoginScreen = (props) => {
             <View style={styles.line} />
             <PipText title={i18n.t('translation.AlreadyAccount')} orgStyle={styles.welcomestyle} />
             <PipText title={i18n.t('translation.Signin')} orgStyle={styles.hintStyle} />
-            <FormInputEmailField
-                title={SignUpFormSchema.email.title}
-                editable={false}
-                control={control}
-                inputStyle={styles.disbaleTextInput}
-                placeHolder={route.params.email}
-                name={SignUpFormSchema.email.name}
-                rules={SignUpFormSchema.email.rules} />
-            <FormInputPasswordField
-                title={SignUpFormSchema.password.title}
-                placeHolder={SignUpFormSchema.password.title}
-                control={control}
-                name={SignUpFormSchema.password.name}
-                rules={SignUpFormSchema.password.rules}
-                inputStyle={styles.passwordstyle} />
-            <ErrorMessage
-                errors={errors}
-                name={SignUpFormSchema.password.name}
-                render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validpassword')} />}
-            />
+            <View style={{ marginTop: '3%', marginStart: '1%' }}>
+                <FormInputEmailField
+                    title={SignUpFormSchema.email.title}
+                    editable={false}
+                    emailedittitle = {true}
+                    control={control}
+                    inputStyle={styles.disbaleTextInput}
+                    placeHolder={route.params.email}
+                    name={SignUpFormSchema.email.name}
+                    rules={SignUpFormSchema.email.rules} />
+            </View>
+            <View style={{ marginTop: '3%', marginStart: '1%' }}>
+                <FormInputPasswordField
+                    title={SignUpFormSchema.password.title}
+                    placeHolder={SignUpFormSchema.password.title}
+                    control={control}
+                    name={SignUpFormSchema.password.name}
+                    rules={SignUpFormSchema.password.rules}
+                    inputStyle={styles.passwordstyle} />
+                <ErrorMessage
+                    errors={errors}
+                    name={SignUpFormSchema.password.name}
+                    render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validpassword')} />}
+                />
+            </View>
             <TouchableOpacity onPress={onSubmit}>
                 <PipText title={i18n.t('translation.ForgotPassword')} orgStyle={styles.forgotPassword} />
             </TouchableOpacity>

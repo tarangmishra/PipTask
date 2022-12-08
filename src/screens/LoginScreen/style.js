@@ -29,7 +29,7 @@ function useStyles() {
             fontSize: '15@s',
             color: PipColors.piphintclor,
             fontFamily: 'Urbanist-Regular',
-            marginTop: '3%',
+            marginTop: '4%',
             marginStart: '12@s',
             marginBottom: '3%'
         },
@@ -48,18 +48,19 @@ function useStyles() {
             bottom: '7%',
         },
         disbaleTextInput: {
-            backgroundColor: PipColors.pipdisbalegry
+            backgroundColor: PipColors.pipdisbalegry,
         },
         passwordstyle: {
             color: 'black',
             fontSize: '15@s',
-            fontFamily: 'Urbanist-Bold'
+            fontFamily: 'Urbanist-Bold',
         },
         forgotPassword: {
             fontFamily: 'Urbanist-Bold',
-            fontSize: '12@s',
-            marginStart: '12@s',
-            marginTop: '3%'
+            fontSize: '14@s',
+            marginStart: '15@s',
+            marginTop: '1%',
+            color: PipColors.pipbuttonColor
         },
         validpassword: {
             color: 'red',
