@@ -9,6 +9,7 @@ import img4 from '../../images/img4.jpg'
 import Swiper from 'react-native-swiper'
 import { useNavigation } from '@react-navigation/native';
 import { i18n } from 'react-native-i18n-localize'
+import PropTypes from 'prop-types';
 
 const { width } = Dimensions.get('window');
 const HomeScreen = () => {
@@ -88,3 +89,7 @@ const HomeScreen = () => {
     )
 }
 export default HomeScreen;
+
+// HomeScreen.PropTypes = {
+
+// }
