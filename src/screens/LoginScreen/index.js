@@ -33,7 +33,7 @@ const LoginScreen = (props) => {
                 <FormInputEmailField
                     title={SignUpFormSchema.email.title}
                     editable={false}
-                    emailedittitle = {true}
+                    emailedittitle={true}
                     control={control}
                     inputStyle={styles.disbaleTextInput}
                     placeHolder={route.params.email}
@@ -64,5 +64,5 @@ const LoginScreen = (props) => {
 }
 export default LoginScreen;
 LoginScreen.prototype = {
-   // item = PropTypes.string
+    // item = PropTypes.string
 }

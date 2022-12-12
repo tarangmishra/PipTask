@@ -10,8 +10,8 @@ function useStyles() {
             justifyContent: 'center',
             alignSelf: 'center',
             marginTop: '15%',
-            fontFamily: 'Urbanist-Bold',
-            fontSize: '15@s',
+            fontFamily: 'Urbanist-ExtraBold',
+            fontSize: '14@s',
         },
         line: {
             borderBottomColor: PipColors.pipGrey,
@@ -39,6 +39,7 @@ function useStyles() {
             alignItems: 'center',
             position: 'absolute',
             bottom: 0,
+            borderColor: PipColors.pipbuttonColor
         },
         bottomViewSingin: {
             width: '80%',
