@@ -38,37 +38,10 @@ const SignUpScreen = () => {
     }
     return (
         <KeyboardAvoidingView style={styles.container}>
-            <View style={{ flexDirection: 'row' }}>
-                <Icon
-                    style={styles.eyeconStyle}
-                    color={PipColors.pipbuttonColor}
-                    name={'chevron-back'}
-                    onPress={()=>{navigation.goBack()}}
-                />
-                <PipText title={i18n.t('translation.Signinbutton')} orgStyle={styles.titleStyle} />
-            </View>
+            <PipText title={i18n.t('translation.Pentair')} orgStyle={styles.titleStyle} />
             <View style={styles.line} />
-            <PipText title={i18n.t('translation.Checkyouremail')} orgStyle={styles.welcomestyle} />
-            <PipText title={i18n.t('translation.CheckEmailHint')} orgStyle={styles.hintStyle} />
-            <PipText title={i18n.t('translation.Sixdigitcode')} orgStyle={styles.sixdigitStyle} />
-            <CodeField
-                ref={ref}
-                {...props}
-                value={value}
-                onChangeText={setValue}
-                cellCount={CELL_COUNT}
-                rootStyle={styles.codeFieldRoot}
-                keyboardType="number-pad"
-                textContentType="oneTimeCode"
-                renderCell={({ index, symbol, isFocused }) => (
-                    <Text
-                        key={index}
-                        style={[styles.cell, isFocused && styles.focusCell]}
-                        onLayout={getCellOnLayoutHandler(index)}>
-                        {symbol || (isFocused ? <Cursor /> : null)}
-                    </Text>
-                )}
-            />
+            <PipText title={i18n.t('translation.SignupTitle')} orgStyle={styles.welcomestyle} />
+            <PipText title={i18n.t('translation.CreatePassword')} orgStyle={styles.hintStyle} />
             <FormInputPasswordField
                 title={SignUpFormSchema.newpassword.title}
                 placeHolder={SignUpFormSchema.newpassword.title}

@@ -31,6 +31,13 @@
         "PasswordChangeSuccess": "Your password has been successfully\nchanged",
         "Continue": "Continue",
         "SingUpbutton": "Sign up",
+        "SignupTitle": "Let's set up your Pentair\nHome app account.",
+        "Cancel": "Cancel",
+        "CreatePassword": "Create Your Password for",
+        "AgreeTerm": "i have read and agree to the Terms of\nServices",
+        "BriefTerms": "I would like to receive Pentair communications regarding helpful tips and\ntricks,product,updates,surveys and special\noffers. You may withdraw your contest at any\ntime in the app.",
+        "PersonalPoint": "Your personal information will be handled in\naccordance with our Privacy notice.",
+        "CreateAccount": "Create My Account",
         "registerUser": {
             "signUpFormTitles": {
                 "email": "Email address",
