@@ -17,8 +17,8 @@ const LoginScreen = (props) => {
     const navigation = useNavigation();
     const { control, formState: { errors }, handleSubmit } = useForm();
 
-    const SignIn = async form => {
-        { console.log("props ", form.password) }
+    const SignUp = () => {
+       navigation.navigate('SignUpScreen')
     }
     const onSubmit = () => {
         navigation.navigate('ForgotPasswordScreen', { email: route.params.email })
@@ -57,7 +57,7 @@ const LoginScreen = (props) => {
             <TouchableOpacity onPress={onSubmit}>
                 <PipText title={i18n.t('translation.ForgotPassword')} orgStyle={styles.forgotPassword} />
             </TouchableOpacity>
-            <PipButton onPress={handleSubmit(SignIn)} title={i18n.t('translation.Signinbutton')} btnStyle={styles.bottomViewSingin} />
+            <PipButton onPress={SignUp} title={i18n.t('translation.SingUpbutton')} btnStyle={styles.bottomViewSingin} />
             <PipButton whiteBackground={true} title={i18n.t('translation.Switchaccount')} buttonStyle={styles.bottomView} />
         </KeyboardAvoidingView>
     );

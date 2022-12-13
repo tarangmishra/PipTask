@@ -30,6 +30,7 @@
         "PasswordChanged": "Password Changed",
         "PasswordChangeSuccess": "Your password has been successfully\nchanged",
         "Continue": "Continue",
+        "SingUpbutton": "Sign up",
         "registerUser": {
             "signUpFormTitles": {
                 "email": "Email address",

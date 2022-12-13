@@ -7,14 +7,17 @@ import { useForm } from 'react-hook-form';
 import { useNavigation } from '@react-navigation/native'
 import { i18n } from 'react-native-i18n-localize'
 import { SignUpFormSchema } from '../../constants/formSchemas/SignUpFormSchema'
+import { connect } from 'react-redux';
+import {setEmail} from '../../redux/actions/emailsreenAction'
 import { ErrorMessage } from '@hookform/error-message';
 
-const EmailScreen = () => {
+const EmailScreen = (props) => {
     const styles = useStyles();
     const navigation = useNavigation();
     const { control, formState: { errors } ,handleSubmit } = useForm();
     const onSubmit = async form => {
         console.log("form ", form.email)
+        props.submit(form.email)
         navigation.navigate('LoginScreen', { email: form.email })
     }
     return (
@@ -38,4 +41,16 @@ const EmailScreen = () => {
         </View>
     );
 }
-export default EmailScreen;
+const mapStateToProps = state => {
+    console.log("log", state)
+    return {
+      getEmailScreenData: state.emailscreenReducer,
+    }
+  }
+  const mapDispatchToProps = (dispatch) => ({
+    submit: (email) => {
+        console.log("dispatch", email)
+      return dispatch(setEmail(email));
+    },
+  });
+  export default connect(mapStateToProps, mapDispatchToProps)(EmailScreen);

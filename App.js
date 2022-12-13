@@ -11,12 +11,16 @@ import { View } from 'react-native';
 import RootNavigator from './src/navigation/RootNavigator';
 import { I18nLocalize } from 'react-native-i18n-localize'
 import english from './languages/english.json'
+import { store } from './src/redux';
+import { Provider } from 'react-redux'
 
 I18nLocalize.initialLanguage({ english })
 const App = () => {
   return (
     <View style={{ flex: 1 }}>
-      <RootNavigator />
+      <Provider store={store}>
+        <RootNavigator />
+      </Provider>
     </View>
   );
 };

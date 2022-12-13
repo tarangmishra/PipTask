@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { HomeScreen, EmailScreen, LoginScreen, ForgotPasswordScreen, CheckEmailScreen } from './../screens';
+import { HomeScreen, EmailScreen, LoginScreen, ForgotPasswordScreen, CheckEmailScreen, SignUpScreen } from './../screens';
 const Stack = createStackNavigator();
 
 const RootNavigator = () => {
@@ -28,6 +28,11 @@ const RootNavigator = () => {
             <Stack.Screen
                 component={CheckEmailScreen}
                 name="CheckEmailScreen"
+                options={{ headerShown: false }} />
+
+            <Stack.Screen
+                component={SignUpScreen}
+                name='SignUpScreen'
                 options={{ headerShown: false }} />
         </>
     );
