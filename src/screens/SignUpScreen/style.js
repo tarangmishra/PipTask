@@ -9,7 +9,7 @@ function useStyles() {
         titleStyle: {  
             alignSelf: 'center',
             fontFamily: 'Urbanist-ExtraBold',
-            top: '48%', 
+            top: '55%', 
             fontSize: '14@s',
         },
         cancelTitle: {
@@ -56,7 +56,7 @@ function useStyles() {
             fontSize: '12@s',
             marginStart: '12@s',
             marginTop: '3%',
-            fontFamily: 'Urbanist-Bold',
+            fontFamily: 'Urbanist-Regular',
         },
         bottomViewSingin: {
             width: '80%',

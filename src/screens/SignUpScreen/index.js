@@ -18,8 +18,8 @@ const SignUpScreen = () => {
     const navigation = useNavigation();
     const { control, formState: { errors }, handleSubmit } = useForm();
     const [value, setValue] = useState('');
-    const onReset = () => {
-        setModalVisible(true)
+    const submit = () => {
+        
     }
     return (
         <KeyboardAvoidingView style={styles.container}>
@@ -67,7 +67,7 @@ const SignUpScreen = () => {
             <PipCheckBox title={i18n.t('translation.AgreeTerm')} />
             <PipCheckBox title={i18n.t('translation.BriefTerms')} />
             <PipText title={i18n.t('translation.PersonalPoint')} orgStyle={styles.personinfoTest} />
-            <PipButton title={i18n.t('translation.CreateAccount')} btnStyle={styles.bottomView} />
+            <PipButton onPress={handleSubmit(submit)} title={i18n.t('translation.CreateAccount')} btnStyle={styles.bottomView} />
         </KeyboardAvoidingView>
     );
 }
