@@ -23,7 +23,7 @@ const SignUpScreen = () => {
     }
     return (
         <KeyboardAvoidingView style={styles.container}>
-            <View style={{ marginTop: '3%' }}>
+            <View style={{padding: "2%"}}>
                 <PipText title={i18n.t('translation.Pentair')} orgStyle={styles.titleStyle} />
                 <PipText title={i18n.t('translation.Cancel')} orgStyle={styles.cancelTitle} />
             </View>
@@ -43,7 +43,6 @@ const SignUpScreen = () => {
                 name={SignUpFormSchema.newpassword.name}
                 render={({ message }) => <PipText orgStyle={styles.validpassword} title={i18n.t('translation.Validpassword')} />}
             />
-
             <FormInputPasswordField
                 title={SignUpFormSchema.confirmpassw.title}
                 placeHolder={SignUpFormSchema.confirmpassw.title}
@@ -67,7 +66,7 @@ const SignUpScreen = () => {
             </View>
             <PipCheckBox title={i18n.t('translation.AgreeTerm')} />
             <PipCheckBox title={i18n.t('translation.BriefTerms')} />
-            <PipText title={i18n.t('translation.PersonalPoint')}/>
+            <PipText title={i18n.t('translation.PersonalPoint')} orgStyle={styles.personinfoTest} />
             <PipButton title={i18n.t('translation.CreateAccount')} btnStyle={styles.bottomView} />
         </KeyboardAvoidingView>
     );

@@ -6,7 +6,7 @@ function globleStyle(dark,editable) {
     inputTextStyle: {
       color: PipColors.pipDisableText,
       fontFamily: 'Urbanist-SemiBold',
-      height: '46@s',
+      height: '40@s',
       fontSize: '16@s',
       margin:'10@s',
       borderWidth: '1@s',
@@ -18,7 +18,7 @@ function globleStyle(dark,editable) {
     labelTextStyle: {
       color: editable? 'grey': 'black',
       fontFamily: 'Urbanist-Bold',
-      fontSize: '15@s',
+      fontSize: '13@s',
       marginStart: '10@s'
     }
   });

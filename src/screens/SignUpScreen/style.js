@@ -9,7 +9,7 @@ function useStyles() {
         titleStyle: {  
             alignSelf: 'center',
             fontFamily: 'Urbanist-ExtraBold',
-            top: '48%',
+            top: '48%', 
             fontSize: '14@s',
         },
         cancelTitle: {
@@ -24,25 +24,25 @@ function useStyles() {
             marginTop: '15@s'
         },
         welcomestyle: {
-            marginTop: '3%',
+            marginTop: '2%',
             fontFamily: 'Urbanist-Bold',
-            fontSize: '25@s',
+            fontSize: '22@s',
             marginStart: '12@s',
             letterSpacing: '-0@s'
         },
         hintStyle: {
-            fontSize: '15@s',
+            fontSize: '12@s',
             color: PipColors.piphintclor,
             fontFamily: 'Urbanist-Regular',
-            marginTop: '2%',
+            marginTop: '0.5%',
             marginStart: '12@s',
         },
         emailexist: {
-            fontSize: '15@s',
+            fontSize: '12@s',
             color: 'black',
             fontFamily: 'Urbanist-Bold',
             marginStart: '12@s',
-            marginBottom: '5%'
+            marginBottom: '4%'
         },
         bottomView: {
             width: '80%',
@@ -50,6 +50,13 @@ function useStyles() {
             alignItems: 'center',
             position: 'absolute',
             bottom: 0,
+        },
+        personinfoTest: {
+            color: PipColors.piphintclor,
+            fontSize: '12@s',
+            marginStart: '12@s',
+            marginTop: '3%',
+            fontFamily: 'Urbanist-Bold',
         },
         bottomViewSingin: {
             width: '80%',
@@ -103,7 +110,8 @@ function useStyles() {
         passwordstyle: {
             color: 'black',
             fontSize: '15@s',
-            fontFamily: 'Urbanist-Bold'
+            fontFamily: 'Urbanist-Bold',
+            letterSpacing: '-0@s'
         },
     })
 }
