@@ -45,5 +45,27 @@ export const SignUpFormSchema = {
       },
     },
   },
+  createpassword: {
+    title: 'Create Password',
+    name: 'password',
+    rules: {
+      required: 'common.required',
+      pattern: {
+        value: PASSWORD_REGEX,
+        message: 'registerUser.signUpFormErrorMessages.password',
+      },
+    },
+  },
+  confirmpassw: {
+    title: 'Confirm Password',
+    name: 'passwords',
+    rules: {
+      required: 'common.required',
+      pattern: {
+        value: PASSWORD_REGEX,
+        message: 'registerUser.signUpFormErrorMessages.password',
+      },
+    },
+  },
 }
 

@@ -6,19 +6,17 @@ function useStyles() {
         container: {
             flex: 1
         },
-        titleStyle: {
-            justifyContent: 'center',
-            marginTop: '8%',
-            marginStart: '12@s',
-            fontFamily: 'Urbanist-Bold',
-            fontSize: '15@s',
+        titleStyle: {  
+            alignSelf: 'center',
+            fontFamily: 'Urbanist-ExtraBold',
+            top: '48%',
+            fontSize: '14@s',
         },
-        eyeconStyle: {
-            justifyContent: 'center',
-            marginTop: '7%',
-            marginStart: '12@s',
+        cancelTitle: {
+            alignSelf: 'flex-end',
             fontFamily: 'Urbanist-Bold',
-            fontSize: '23@s'
+            fontSize: '14@s',
+            marginEnd: '8%'
         },
         line: {
             borderBottomColor: PipColors.pipGrey,
@@ -38,7 +36,13 @@ function useStyles() {
             fontFamily: 'Urbanist-Regular',
             marginTop: '2%',
             marginStart: '12@s',
-            marginBottom: '2%'
+        },
+        emailexist: {
+            fontSize: '15@s',
+            color: 'black',
+            fontFamily: 'Urbanist-Bold',
+            marginStart: '12@s',
+            marginBottom: '5%'
         },
         bottomView: {
             width: '80%',
@@ -93,7 +97,8 @@ function useStyles() {
             padding: '2@s'
         },
         flatText: {
-          color: PipColors.piphintclor
+            color: PipColors.piphintclor,
+            fontSize: '15@s'
         },
         passwordstyle: {
             color: 'black',

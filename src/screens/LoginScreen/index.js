@@ -9,7 +9,7 @@ import { i18n } from 'react-native-i18n-localize'
 import { SignUpFormSchema } from '../../constants/formSchemas/SignUpFormSchema';
 import { ErrorMessage } from '@hookform/error-message';
 import { useNavigation } from '@react-navigation/native'
-import PropTypes from 'prop-types';
+
 
 const LoginScreen = (props) => {
     const styles = useStyles();
@@ -63,6 +63,4 @@ const LoginScreen = (props) => {
     );
 }
 export default LoginScreen;
-LoginScreen.prototype = {
-    // item = PropTypes.string
-}
+
