@@ -66,7 +66,7 @@ const SignUpScreen = () => {
             </View>
             <PipCheckBox title={i18n.t('translation.AgreeTerm')} subtitle={i18n.t('translation.TermServices')} orgStyle={styles.termandservices}/>
             <PipCheckBox title={i18n.t('translation.BriefTerms')} />
-            <PipText title={i18n.t('translation.PersonalPoint')} orgStyle={styles.personinfoTest} />
+            <PipText title={i18n.t('translation.PersonalPoint')} subtitle={i18n.t('translation.PrivacyNotice')}orgStyle={styles.personinfoTest} privacyStyle={styles.termandservices} />
             <PipButton onPress={handleSubmit(submit)} title={i18n.t('translation.CreateAccount')} btnStyle={styles.bottomView} />
         </KeyboardAvoidingView>
     );

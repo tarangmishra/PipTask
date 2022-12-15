@@ -16,7 +16,8 @@ function useStyles() {
             alignSelf: 'flex-end',
             fontFamily: 'Urbanist-Bold',
             fontSize: '14@s',
-            marginEnd: '8%'
+            marginEnd: '8%',
+            color: PipColors.pipbuttonColor
         },
         line: {
             borderBottomColor: PipColors.pipGrey,
