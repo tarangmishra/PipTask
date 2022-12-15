@@ -68,7 +68,8 @@ function useStyles() {
         validpassword: {
             color: 'red',
             marginStart: '12@s',
-            fontFamily: 'Urbanist-Regular'
+            fontFamily: 'Urbanist-Regular',
+            bottom: '15@s'
         },
         sixdigitStyle: {
             justifyContent: 'center',
@@ -111,7 +112,8 @@ function useStyles() {
             color: 'black',
             fontSize: '15@s',
             fontFamily: 'Urbanist-Bold',
-            letterSpacing: '-0@s'
+            letterSpacing: '-0@s',
+            bottom: '7@s'
         },
     })
 }

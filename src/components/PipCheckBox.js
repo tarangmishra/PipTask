@@ -14,14 +14,14 @@ const PipCheckBox = ({ title, titleStyle, orgStyle }) => {
                 value={isSelected}
                 onValueChange={(newValue) => setSelection(newValue)}
             />
-            <Text style={styles.label}>{title}</Text>
+            <Text style={styles.label, titleStyle}>{title}</Text>
         </View>
 
     </View>
 };
 function useStyles() {
     return ScaledSheet.create({
-       
+
         checkboxContainer: {
             flexDirection: "row",
             marginStart: '5@s',
