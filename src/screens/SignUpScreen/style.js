@@ -115,6 +115,11 @@ function useStyles() {
             letterSpacing: '-0@s',
             bottom: '7@s'
         },
+        termandservices: {
+            color: PipColors.pipbuttonColor,
+            fontFamily: 'Urbanist-Bold',
+            fontSize: '12@s'
+        }
     })
 }
 export default useStyles;

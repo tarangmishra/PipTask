@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, TouchableWithoutFeedback } from 'react-native';
 import { ScaledSheet } from 'react-native-size-matters'
 import CheckBox from '@react-native-community/checkbox';
+import { useNavigation } from '@react-navigation/native'
 
-const PipCheckBox = ({ title, titleStyle, orgStyle }) => {
+const PipCheckBox = ({ title, titleStyle, orgStyle, subtitle }) => {
     const [isSelected, setSelection] = useState(false);
     const styles = useStyles();
+    const navigation = useNavigation();
 
     return <View style={styles.container}>
         <View style={styles.checkboxContainer}>
@@ -14,7 +16,7 @@ const PipCheckBox = ({ title, titleStyle, orgStyle }) => {
                 value={isSelected}
                 onValueChange={(newValue) => setSelection(newValue)}
             />
-            <Text style={styles.label, titleStyle}>{title}</Text>
+            <Text style={styles.label, titleStyle}>{title+" "}<TouchableWithoutFeedback onPress={()=>{navigation.navigate('TermOfServices')}}><Text style={orgStyle}>{subtitle}</Text></TouchableWithoutFeedback></Text>
         </View>
 
     </View>

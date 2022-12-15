@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, FlatList, KeyboardAvoidingView } from 'react-native'
+import { View, FlatList, KeyboardAvoidingView,TouchableWithoutFeedback } from 'react-native'
 import { PipButton, PipText, PipCheckBox } from '../../components'
 import useStyles from './style'
 import { FormInputPasswordField } from '../../../src/components/form'
@@ -64,7 +64,7 @@ const SignUpScreen = () => {
                     );
                 }} />
             </View>
-            <PipCheckBox titleStyle={{color:'red'}} title={i18n.t('translation.AgreeTerm')+i18n.t('translation.TermServices')} />
+            <PipCheckBox title={i18n.t('translation.AgreeTerm')} subtitle={i18n.t('translation.TermServices')} orgStyle={styles.termandservices}/>
             <PipCheckBox title={i18n.t('translation.BriefTerms')} />
             <PipText title={i18n.t('translation.PersonalPoint')} orgStyle={styles.personinfoTest} />
             <PipButton onPress={handleSubmit(submit)} title={i18n.t('translation.CreateAccount')} btnStyle={styles.bottomView} />
