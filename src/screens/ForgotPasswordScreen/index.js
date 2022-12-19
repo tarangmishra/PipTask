@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { View } from 'react-native'
 import { PipButton, PipText } from '../../components'
 import useStyles from './style'
@@ -11,24 +11,30 @@ import { ErrorMessage } from '@hookform/error-message';
 import { useRoute } from '@react-navigation/native'
 import Icon from 'react-native-vector-icons/Ionicons';
 import { PipColors } from '../../utils/colors';
+import { connect } from 'react-redux';
+import { EMAIL_SUCCESS } from '../../constants/reduxConst'
 
-const ForgotPasswordScreen = () => {
+const ForgotPasswordScreen = (props) => {
     const styles = useStyles();
     const route = useRoute();
     const navigation = useNavigation();
     const { control, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = () => {
-        // console.log("form ", form.email)
-        navigation.navigate('CheckEmailScreen')
+        props.submit(form.email)
     }
+    useEffect(() => {
+        if (props.getEmailScreenData.type === EMAIL_SUCCESS) {
+            navigation.navigate('CheckEmailScreen', { email: props.getEmailScreenData.data })
+        }
+    }, [props.getEmailScreenData])
     return (
         <View style={styles.container}>
-            <View style={{flexDirection: 'row'}}>
+            <View style={{ flexDirection: 'row' }}>
                 <Icon
                     style={styles.eyeconStyle}
                     color={PipColors.pipbuttonColor}
                     name={'chevron-back'}
-                    onPress={()=>{navigation.goBack()}}
+                    onPress={() => { navigation.goBack() }}
                 />
                 <PipText title={i18n.t('translation.Signinbutton')} orgStyle={styles.titleStyle} />
             </View>
@@ -51,4 +57,15 @@ const ForgotPasswordScreen = () => {
         </View>
     );
 }
-export default ForgotPasswordScreen;
+const mapStateToProps = state => {
+    return {
+        getEmailScreenData: state.emailscreenReducer,
+    }
+}
+const mapDispatchToProps = (dispatch) => ({
+    submit: (email) => {
+        console.log("dispatch", email)
+        return dispatch(setEmail(email));
+    },
+});
+export default connect(mapStateToProps, mapDispatchToProps)(ForgotPasswordScreen);

@@ -1,5 +1,6 @@
 import {
     EMAIL_SUCCESS,
+    RESET_EMAIL_DETAILS,
 } from '../../constants/reduxConst'
 
 export const getEmailsSuccess = (data) => {
@@ -10,10 +11,16 @@ export const getEmailsSuccess = (data) => {
 
     }
 }
-export const setEmail = (email) => async dispatch => {
+export const resetEmailDetails = () => {
+    return {
+        type: RESET_EMAIL_DETAILS,
+      }
+}
+export const setEmail = (email) => dispatch => {
     console.log("setEmail", email)
     dispatch(getEmailsSuccess(email))
 }
+
 
 
 

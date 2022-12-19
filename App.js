@@ -14,6 +14,7 @@ import english from './languages/english.json'
 import { store } from './src/redux';
 import { Provider } from 'react-redux'
 
+
 I18nLocalize.initialLanguage({ english })
 const App = () => {
   return (

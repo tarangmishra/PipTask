@@ -9,7 +9,7 @@ import { i18n } from 'react-native-i18n-localize'
 import { SignUpFormSchema } from '../../constants/formSchemas/SignUpFormSchema';
 import { ErrorMessage } from '@hookform/error-message';
 import { useNavigation } from '@react-navigation/native'
-
+import { connect } from 'react-redux';
 
 const LoginScreen = (props) => {
     const styles = useStyles();
@@ -62,5 +62,14 @@ const LoginScreen = (props) => {
         </KeyboardAvoidingView>
     );
 }
-export default LoginScreen;
+const mapStateToProps = state => {
+    console.log("login screen map state to props ", state.emailscreenReducer.data)
+    return {
+      getEmailScreenData: state.emailscreenReducer,
+    }
+  }
+  const mapDispatchToProps = (dispatch) => ({
+   
+  });
+export default connect(mapStateToProps,mapDispatchToProps)(LoginScreen);
 

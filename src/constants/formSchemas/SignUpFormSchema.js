@@ -67,5 +67,17 @@ export const SignUpFormSchema = {
       },
     },
   },
+  // termandcondition: {
+  //   title: 'Term and condition',
+  //   name: 'Terms',
+  //   rules: {
+  //     required: 'common.required',
+  //     pattern: {
+  //       value: PASSWORD_REGEX,
+  //       message: 'registerUser.signUpFormErrorMessages.password',
+  //     },
+  //   },
+  // },
 }
+
 

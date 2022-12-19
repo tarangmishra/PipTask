@@ -44,6 +44,7 @@
         "TermOfServices": "This Terms of Service (Aggrement) is abinding\naggrement between you(You(and as applicable\nYour)) and Pentair Water Group Inc (Pentair).\nThis Aggrement governs Your use at (a) Pentair\nHome and Pentair Pro mobiles apps and (b) Pentair\nHome and Pentair Pro web apps accessible\nthrough Pentair.com for use with Pentair products\nwquipment or services(together with any materials\nand services available therein and only\nsuccess(s)thereto the Services).",
         "TermOfServices2": "BY CLICKING THE ACEPT BUTTON BY ACCESS\nOR USING THE SERVICE OR BY OTHERWISE\nINDICATING YOUR CONSENT YOU ACCESPT AND\nAGREE TO BE BOUND BY THIS AGGREMENT,ON BEHALF\nOF YOURSELF AND,IF APPLICABLE,ANY CORPORATION\nGOVERMENTAL ORGNIZATION OR OTHER LEGAL\nENTITY ON WHOSE BEHALF YOU ARE ACTING(b)\nREPRESENT AND WARRANT THAT YOU ARE SUFFICIENT LEGAL AGE IN THE SECTION IN WHICH\nYOU RESIDE TO USE YOUR ACCESS THE SERVICE AND TO\nENTIRE TO THE AGGREMENT\nINCLUDES BEHALF OF ANY SUCH\nENTITY,IF APPLICABLE THE TERMS YOU AND YOUR\nWILL INCLUDE BOTH YOU AND ANY SUCH ENTITY,IF\nAPPLICABLE YOU DO NOT AGREE TO THE TERMS OF\nTHIS AGGREMENT,PENTAIR WILL NOT AND DOES NOT\nLICENSE THE SERVICE TO YOU,AND YOU MUST NOT\nDOWNLOAD,INSTALL,ACCESS OR USE THE\nSERVICE YOU ARE CONSENTING TO AUTOMATIC\nSOFTWARE OR FIRMWARE UPDATES OF PORTIONS OF\nTHE SERVICE OR PENATIR OF SERVICE.",
         "Accept": "Accept",
+        "ErrroTerm": "You must agree to the term of Service",
         "registerUser": {
             "signUpFormTitles": {
                 "email": "Email address",
