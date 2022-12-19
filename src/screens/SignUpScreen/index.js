@@ -12,7 +12,7 @@ import { useRoute } from '@react-navigation/native'
 import * as Yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 
-const SignUpScreen = () => {
+const SignUpScreen = (props) => {
     const validation = Yup.object().shape({
         chooseCb: Yup.bool().oneOf([true], i18n.t('translation.ErrroTerm')),
     })
@@ -24,18 +24,18 @@ const SignUpScreen = () => {
     const { control, formState: { errors }, handleSubmit } = useForm(optionsForm);
     const [value, setValue] = useState('');
     const submit =  async form => {
-
+          
     }
     return (
         <KeyboardAvoidingView style={styles.container}>
             <View style={{ padding: "2%" }}>
                 <PipText title={i18n.t('translation.Pentair')} orgStyle={styles.titleStyle} />
-                <PipText title={i18n.t('translation.Cancel')} orgStyle={styles.cancelTitle} />
+                <PipText onPress={()=>{navigation.goBack()}} title={i18n.t('translation.Cancel')} orgStyle={styles.cancelTitle} />
             </View>
             <View style={styles.line} />
             <PipText title={i18n.t('translation.SignupTitle')} orgStyle={styles.welcomestyle} />
             <PipText title={i18n.t('translation.CreatePassword')} orgStyle={styles.hintStyle} />
-            <PipText title={i18n.t('translation.CreatePassword')} orgStyle={styles.emailexist} />
+            <PipText title={route.params.email} orgStyle={styles.emailexist} />
             <FormInputPasswordField
                 title={SignUpFormSchema.createpassword.title}
                 placeHolder={SignUpFormSchema.createpassword.title}

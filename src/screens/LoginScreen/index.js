@@ -18,7 +18,7 @@ const LoginScreen = (props) => {
     const { control, formState: { errors }, handleSubmit } = useForm();
 
     const SignUp = () => {
-       navigation.navigate('SignUpScreen')
+       navigation.navigate('SignUpScreen', { email: route.params.email })
     }
     const onSubmit = () => {
         navigation.navigate('ForgotPasswordScreen', { email: route.params.email })

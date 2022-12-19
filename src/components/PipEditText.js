@@ -50,7 +50,7 @@ function useStyles(editable) {
         eyeIconStyle: {
             position: 'absolute',
             bottom: 0,
-            top: '45%',
+            top: '35%',
             right: '8%',
             end: 0
         },
