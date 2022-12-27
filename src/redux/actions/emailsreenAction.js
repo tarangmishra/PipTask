@@ -8,7 +8,6 @@ export const getEmailsSuccess = (data) => {
     return {
         type: EMAIL_SUCCESS,
         data: data,
-
     }
 }
 export const resetEmailDetails = () => {

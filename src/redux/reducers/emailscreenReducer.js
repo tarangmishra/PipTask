@@ -5,7 +5,7 @@ import {
 
 const initialState = {
     type: null,
-    data: null,
+    data: [],
 }
 
 export const emailscreenReducer = (state = initialState, action) => {

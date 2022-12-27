@@ -17,17 +17,18 @@ const EmailScreen = (props) => {
   const navigation = useNavigation();
   const { control, formState: { errors }, handleSubmit } = useForm();
 
-  useEffect(() => {
-    console.log("ff", props.getEmailScreenData.type)
-    if (props.getEmailScreenData.type === EMAIL_SUCCESS) {
-      navigation.navigate('LoginScreen', { email: props.getEmailScreenData.data })
-    }
-    return () => {
-      props.resetEmail()
-    }
-  }, [])
+  // useEffect(() => {
+  //   // console.log("ff", props.getEmailScreenData.type)
+  //   // if (props.getEmailScreenData.type === EMAIL_SUCCESS) {
+  //   //   navigation.navigate('LoginScreen', { email: props.getEmailScreenData.data })
+  //   // }
+  //   // return () => {
+  //   //   props.resetEmail()
+  //   // }
+  // }, [])
   const onSubmit = async form => {
-    props.submit(form.email)
+    navigation.navigate('LoginScreen', { email: form.email})
+   // props.submit(form.email)
   }
   return (
     <View style={styles.container}>
@@ -50,18 +51,18 @@ const EmailScreen = (props) => {
     </View>
   );
 }
-const mapStateToProps = state => {
-  return {
-    getEmailScreenData: state.emailscreenReducer,
-  }
-}
-const mapDispatchToProps = (dispatch) => ({
-  submit: (email) => {
-    console.log("dispatch", email)
-    return dispatch(setEmail(email));
-  },
-  resetEmail: () => {
-    return dispatch(resetEmailDetails())
-  }
-});
-export default connect(mapStateToProps, mapDispatchToProps)(EmailScreen);
+// const mapStateToProps = state => {
+//   return {
+//     getEmailScreenData: state.emailscreenReducer,
+//   }
+// }
+// const mapDispatchToProps = (dispatch) => ({
+//   submit: (email) => {
+//     console.log("dispatch", email)
+//     return dispatch(setEmail(email));
+//   },
+//   resetEmail: () => {
+//     return dispatch(resetEmailDetails())
+//   }
+// });
+export default EmailScreen;

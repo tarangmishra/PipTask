@@ -62,14 +62,14 @@ const LoginScreen = (props) => {
         </KeyboardAvoidingView>
     );
 }
-const mapStateToProps = state => {
-    console.log("login screen map state to props ", state.emailscreenReducer.data)
-    return {
-      getEmailScreenData: state.emailscreenReducer,
-    }
-  }
-  const mapDispatchToProps = (dispatch) => ({
+// const mapStateToProps = state => {
+//     console.log("login screen map state to props ", state.emailscreenReducer.data)
+//     return {
+//       getEmailScreenData: state.emailscreenReducer,
+//     }
+//   }
+//   const mapDispatchToProps = (dispatch) => ({
    
-  });
-export default connect(mapStateToProps,mapDispatchToProps)(LoginScreen);
+//   });
+export default LoginScreen;
 
